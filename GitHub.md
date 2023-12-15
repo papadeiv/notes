@@ -1,0 +1,30 @@
+## Create local ssh key and link it with your account
+```bash
+mkdir ~/.ssh
+ssh -keygen -t -rsa
+cat ~/.ssh/id_rsa.pub
+```
+Copy the key -> Go to the Github profile page -> Settings -> SSH and GPG -> Add new Github SSH key -> Paste in and save
+
+## Create local repo and link it to remote
+Initialise your local dir as a Git repo
+```bash
+git init
+```
+Create and configure the gitignore file
+```bash
+touch .gitignore
+```
+Add files and commit 
+```bash
+git add .
+git commit -m "First commit"
+```
+Create the remote repo on GitHub and sync it to track changes with the local one
+```bash
+git remote add origin git@github.com:papadeiv/repo-name.git
+```
+Push your first commit to remote
+```bash
+git push -u origin master 
+```
