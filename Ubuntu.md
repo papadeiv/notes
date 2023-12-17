@@ -48,6 +48,22 @@ and restart!
 ```bash
 ```
 
+## Troubleshooting
+
+- [] syslog
+1. Get the name of the process that is using a lot of CPU
+```bash
+sudo tail /var/log/syslog
+```
+2. Kill it
+```bash
+killall <name_of_the_process>
+```
+3. Clear the log file
+```bash
+sudo truncate -s 0 /var/log/syslog
+```
+
 - [] ITHACA-FV
 ```bash
 ```
