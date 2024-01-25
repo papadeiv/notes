@@ -27,7 +27,6 @@ sudo apt upgrade
 - [] gcc
 - [] make
 - [] CMake
-- [] Julia
 - [] Git
 - [] htop
 - [] neofetch
@@ -39,6 +38,11 @@ sudo apt purge --auto-remove
 and restart!
 
 ## Configuration
+- [] Shortcuts
+1. Home folder: `super + e`
+2. Web browser: `super + return`
+3. Settings: `ctrl + q`
+4. 
 
 - [] OpenFOAM
 1. Google `OpenFOAM 2212 installation` and go to the Gitlab doc for development
@@ -47,6 +51,8 @@ and restart!
 4. Follow the steps in the `Quick Build Guide` doc on Gitlab
 ```bash
 ```
+- [] ITHACA-FV
+- [] Julia 
 
 ## Troubleshooting
 
@@ -62,8 +68,4 @@ killall <name_of_the_process>
 3. Clear the log file
 ```bash
 sudo truncate -s 0 /var/log/syslog
-```
-
-- [] ITHACA-FV
-```bash
 ```
