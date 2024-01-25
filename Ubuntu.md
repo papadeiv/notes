@@ -42,17 +42,12 @@ and restart!
 1. Home folder: `super + e`
 2. Web browser: `super + return`
 3. Settings: `ctrl + q`
-4. 
 
 - [] OpenFOAM
-1. Google `OpenFOAM 2212 installation` and go to the Gitlab doc for development
+1. Go to the [Gitlab development page](https://develop.openfoam.com/Development/openfoam/-/blob/master/doc/Build.md)
 2. Check the `Requirements build` first and `OpenFOAM build` second
 3. Download the `Source` archive and `Third Party` archive and put the latter into the former; the hierarchy should be: `/home/papadeiv/Librerie/OpenFOAM/ThirdParty`
 4. Follow the steps in the `Quick Build Guide` doc on Gitlab
-```bash
-```
-- [] ITHACA-FV
-- [] Julia 
 
 ## Troubleshooting
 

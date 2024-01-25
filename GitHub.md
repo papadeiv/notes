@@ -28,3 +28,8 @@ Push your first commit to remote
 ```bash
 git push -u origin master 
 ```
+## Get a specific branch from remote
+```bash
+git pull
+git checkout --track origin/name-of-the-branch
+```
