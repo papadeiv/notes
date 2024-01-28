@@ -10,6 +10,11 @@ rm -fr xzvf nvim-linux64.tar.gz
 ```bash
 ln -s ./nvim-linux64/bin/nvim ./nvim
 ```
+make sure that the location of the symlink is into the `PATH` variable otherwise add this
+```bash
+export PATH=$PATH:~/.local/bin:
+```
+into the `.bashrc`
 4. Copy your dotfiles into the `~/.config/` folder 
 5. First run: when you type `nvim` for the first time you will be greeted with a bunch of error messages due to the various plugins in `~/.config/nvim/` not being installed yet; press `Enter`. If Packer is not launched automatically you will have to type `:PackerSync` and then `:PackerCompile`
 6. The next run should be fully working

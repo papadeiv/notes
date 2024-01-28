@@ -1,7 +1,7 @@
 ## Create local ssh key and link it with your account
 ```bash
 mkdir ~/.ssh
-ssh -keygen -t -rsa
+ssh-keygen -t rsa
 cat ~/.ssh/id_rsa.pub
 ```
 Copy the key -> Go to the Github profile page -> Settings -> SSH and GPG -> Add new Github SSH key -> Paste in and save
