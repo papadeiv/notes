@@ -23,4 +23,21 @@ Accept the terms and conditions and specify
 ```bash
 /usr/local/lib/anaconda3
 ```
-as the installation directory
+as the installation directory. Create a new virtual environment
+```bash
+conda create --name env_name
+```
+Install packages
+```bash
+conda env list
+conda activate env_name
+conda list
+conda install numpy matplotlib pandas pytorch
+conda deactivate 
+```
+Update and remove packages
+```bash
+conda search scikit-learn
+conda update "scikit-learn>=1.11"
+conda remove scikit-learn
+```
