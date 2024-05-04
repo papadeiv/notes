@@ -1,3 +1,6 @@
+## Workflow
+![git_workflow](./figures/git_workflow.gif)
+
 ## Create local ssh key and link it with your account
 ```bash
 mkdir ~/.ssh
