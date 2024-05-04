@@ -1,5 +1,0 @@
-# Dynamical System
-
-## Deterministic
-
-## Stochastic
