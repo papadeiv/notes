@@ -23,13 +23,13 @@ Once we decompose the series, we can explain what each component represents in t
 Integrating your understanding of the data’s context is crucial throughout each step of your analysis. Whether industry-specific knowledge or familiarity with specific patterns, this insight will help refine your models and projections, leading to more accurate and meaningful models.
 
 ## Properties
-* ??
+* __??__
   > ??
-* ??
+* __??__
   > ??
 
 ## Examples
-* ??
+* __??__
   > ??
-* ??
+* __??__
   > ??
