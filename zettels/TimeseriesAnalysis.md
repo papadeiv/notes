@@ -18,10 +18,18 @@ Model of the remaining noise aka the __residuals__: After accounting for trend a
 With a stationary noise distribution, you can apply statistical heuristics, such as calculating the average and variance, to make future projections. These estimates can serve as a basis for more complex forecasting. For a more detailed analysis, you might explore stochastic models like Brownian motion. These models account for randomness and can provide more nuanced insights into how your time series data might evolve.
 
 Once we decompose the series, we can explain what each component represents in the real world and, perhaps, what caused it.
-![decomposition](./figures/TimeseriesAnalysis_1.png)
+![decomposition](../figures/TimeseriesAnalysis_1.png)
 
 Integrating your understanding of the data’s context is crucial throughout each step of your analysis. Whether industry-specific knowledge or familiarity with specific patterns, this insight will help refine your models and projections, leading to more accurate and meaningful models.
 
 ## Properties
+* ??
+  > ??
+* ??
+  > ??
 
 ## Examples
+* ??
+  > ??
+* ??
+  > ??

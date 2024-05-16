@@ -20,13 +20,22 @@ _Sliding windows_ will allow the characterisation of the timeseries as a functio
 A timeseries can be viewed as a collection of random-variables, each one associated to a single time-realization. As a result one can model a timeseries of N realizations through a multivariate N-dimensional joint probability distribution.
 
 ## Properties
-A timeseries can be:
-- __weakly stationary__: its mean and covariance do not change with time i.e. the mean is constant and the covariance only depends on the the lag and not the time points themselves;
-![stationaryVSnonstationary](./figures/Timeseries_1.png)
-- __strictly stationary__: the cdf of the joint distribution of the realizations is time-independent;
-- __non-linear__: when the underlying stochastic process is non-linear;
-- __multivariate__: when the realizations are vector valued random variables i.e. multivariates themselves;
-- __irregular__: sampled at non-uniform time intervals or presenting gaps in the observations;
-- __non-ergodic__: when the underlying stochastic process is non-ergodic.
+* __weakly stationary__ 
+  > its mean and covariance do not change with time i.e. the mean is constant and the covariance only depends on the the lag and not the time points themselves 
+  [stationaryVSnonstationary](../figures/Timeseries_1.png)
+* __strictly stationary__
+  > the cdf of the joint distribution of the realizations is time-independent;
+* __non-linear__
+  > when the underlying stochastic process is non-linear;
+* __multivariate__
+  > when the realizations are vector valued random variables i.e. multivariates themselves;
+* __irregular__
+  > sampled at non-uniform time intervals or presenting gaps in the observations;
+* __non-ergodic__
+  > when the underlying stochastic process is non-ergodic.
 
 ## Examples
+* ??
+  > ??
+* ??
+  > ??
