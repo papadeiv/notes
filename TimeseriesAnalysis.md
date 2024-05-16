@@ -1,6 +1,4 @@
 # Timeseries analysis (TSA) 
-
-## Definition
 Set of analytical and numerical technique for the identification of patterns in time sequential data including trends, seasonalities and irregularities. The goal of TSA should be that of modelling and understanding the underlying structure of the timeseries in the form of a stochastic process.
 
 The by-product of TSA is the decomposition of a timeseries in deterministic trend and seasonality and its noisy residuals.
@@ -23,5 +21,7 @@ Once we decompose the series, we can explain what each component represents in t
 ![decomposition](./figures/TimeseriesAnalysis_1.png)
 
 Integrating your understanding of the data’s context is crucial throughout each step of your analysis. Whether industry-specific knowledge or familiarity with specific patterns, this insight will help refine your models and projections, leading to more accurate and meaningful models.
+
+## Properties
 
 ## Examples
