@@ -1,7 +1,5 @@
 # CONCEPT
 
-## Definition
-
 ## Intuition
 
 ## Properties

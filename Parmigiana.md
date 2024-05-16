@@ -13,7 +13,7 @@
 - Mortadella
 - Olio di semi di girasole (2L)
 - Passata (2 bottiglie)
-- Aglio, olio, cipolla, basilico, prezzemolo, sale & pepe (qb) 
+- Aglio, olio, cipolla, basilico, prezzemolo, sale & pepe (quarterback) 
 
 ## Steps (time: 2 to 3 hours)
 - 4 melanzane: le sbucci, le tagli a fette(spessore 5mm) 

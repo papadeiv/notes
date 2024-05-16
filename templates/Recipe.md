@@ -1,10 +1,10 @@
 # RECIPE
 
 ## Tools
--
+- Teglia da forno ({?}x{?}x{?} cm)
 
-## Ingredients (n. of people)
--
+## Ingredients (? ppl)
+- ? (qty)
 
-## Steps (time)
+## Steps (time: ? hours)
 -
