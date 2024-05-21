@@ -1,0 +1,67 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\section{Interval diffeomorphisms}\label{sec2}
+\begin{definition}[Interval diffeomorphism]\label{def1}
+     Let $I \subseteq \mathbb{R}$ a compact interval and $f:\,I\,\to I$ a $\mathcal{C}^{1}$ diffeomorphism, then the following properties hold
+     \begin{itemize}
+          \item endpoints are mapped to endpoints;
+          \item $\newprime{f}(x)\neq 0\,\,\forall x\in I$;
+          \item $f$ is either orientation preserving (i.e. $\newprime{f}(x)>0\,\,\forall x\in I$) or orientation reversing ($\newprime{f}(x)<0\,\,\forall x \in I$);
+          \item if $f(p)=p$ then $p$ is hyperbolic if $\newprime{f}(p)\neq1$;
+          \item if all fixed points of $f$ are hyperbolic then we say that $f$ is hyperbolic.
+     \end{itemize}
+\end{definition}
+\begin{proposition*}
+     $f:\,I\,\to I$ orientation preserving $\mathcal{C}^{1}$ diffeomorphism then $\forall x \in I$ the limit sets $\omega(x), \alpha(x)$ are fixed points for $f$.
+\end{proposition*}
+\begin{interpretation*}{}
+     The only thing that a point $x\in I$ can do under iterations of an interval diffeomorphism $f(x)$ (forward or backward in time) is to converge to a fixed point of the map.
+\end{interpretation*}
+\begin{observation}[]\label{obs1}
+     Let $f:\,I\,\to I$ and $g:\,J\,\to J$ two $\mathcal{C}^{1}$ diffeomorphisms s.t. they only have two fixed points each then they are topologically conjugate.
+\end{observation}
+\begin{lemma}
+     If $p$ is a hyperbolic fixed point for $f:\,I\,\to I$ orientation preserving interval diffeomorphism then $p$ is isolted, i.e. $\exists \mathcal{U} \subset I$ s.t. $\forall x\neq p$ in $\mathcal{U}$ they are not isolted themselves.
+\end{lemma}
+\begin{proof}
+     Exercise (Hint: by contraddiction and mean value theorem).
+\end{proof}
+\begin{corollary}
+     If $f$ is hyperbolic then $f$ has at most a finite number of fixed points.
+\end{corollary}
+\begin{corollary}
+     Conjugacy classes of hyperbolic, orientation preserving $\mathcal{C}^{1}-$diffeomorphism are characterised (i.e. the minimum information required to identify the conjugacy) by the number of fixed points. 
+\end{corollary}
+\begin{proposition*}
+     If $f,g$ are two orientation preserving, hyperbolic diffeomorphisms then $f,g$ are topologically conjugate $\iff$ they have the same number of fixed points.
+\end{proposition*}
+\begin{proof}
+     Suppose $f:\,[a,b]\,\to [a,b]$ and $g:\,[\newprime{a},\newprime{b}]\,\to [\newprime{a},\newprime{b}]$, and $a=a_{1}<a_{2}<\dots<a_{s}=b$, $\newprime{a}=\newprime{a}_{1}<\newprime{a}_{2}<\dots<\newprime{a}_{s}=\newprime{b}$.     
+     \begin{figure}[H]
+         \centering 
+         %\includegraphics[keepaspectratio, width=\textwidth]{../figures/.png}
+         \caption{Two different diffeomorphisms with different fixed points.}
+         \label{fig1}
+     \end{figure}
+     For each pair of sub-intervals $[a_{j}, a_{j+1}]$, $[\newprime{a}_{j},\newprime{a}_{j+1}]$ we can define an homeomorphism $h_{j}:\,[a_{j},a_{j+1}]\,\to [\newprime{a}_{j},\newprime{a}_{j+1}]=h|_{[a_{j},a_{j+1}]}$ which we observe is the restriction to $[a_{j},a_{j+1}]$ of a topological conjugacy between $f$ and $g$.
+\end{proof}
+\begin{definition}[Uniform norm]\label{def2}
+     Let $f,g:\,I\,\to I$ two continuous maps then the $\mathcal{C}^{0}-$distance between the two maps is defined as
+     \begin{equation}\label{eq2}
+             d_{0}(f,g):=\text{sup}_{x\in I}\{|f(x)-g(x)|\}_{}
+     \end{equation}
+\end{definition}
+Unfortunately the uniform norm is not enough to check the structural stability of the conjugacy classes as defined above and so we modify \eqref{eq2} as such:
+\begin{equation}\label{eq3}
+     d_{1}(f,g)=\text{sup}_{x\in I}\{|f(x)-g(x)|+|\newprime{f}(x) - \newprime{g}(x)|\}_{}
+\end{equation}
+\begin{remark*}
+        $d_{0}$ and $d_{1}$ induce very different topologies on the space $\mathcal{C}^{1}(I)$ of $\mathcal{C}^{1}-$maps
+\end{remark*}
+\begin{example}[label=ex1]{}{}
+        $I=[0,1]$, $f(x)=\frac{1}{2}$ and $g(x)=\frac{1}{2}+ \epsilon \sin(\frac{x}{\epsilon})$
+
+        $d_{0}(f,g)=\epsilon$ meanwhile $d_{1}(f,g)\geq1$ $\Rightarrow$ $d_{0}\to 0\,,\quad\epsilon\to0$ whereas $d_{1}\to1\,,\quad\epsilon\to0$.
+\end{example}
+
+\end{document}
