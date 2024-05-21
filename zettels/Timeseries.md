@@ -25,12 +25,12 @@ A timeseries can be viewed as a collection of random-variables, each one associa
 
 ## Properties
 * __Weak stationary / Wide-sense stationarity__ 
-  > its mean and covariance do not change with time i.e. the mean is constant and the covariance only depends on the the lag and not the time points themselves 
+  > its mean and covariance do not change with time i.e. the mean is constant and the covariance only depends on the the lag and not the time points themselves ([check](http://sfb649.wiwi.hu-berlin.de/fedc_homepage/xplore/tutorials/xegbohtmlnode37.html)); 
   ![stationary-nonstationary](../figures/Timeseries_1.png)
 * __Strict stationary__
   > the cdf of the joint distribution of the realizations is time-independent;
 * __Non-linearity__
-  > when the underlying stochastic process is non-linear;
+  > when the underlying stochastic process is non-linear ([check](https://github.com/dill/mgcv-workshop/blob/master/example-nonlinear-timeseries.Rmd));
 * __Multivariate__
   > when the realizations are vector valued random variables i.e. multivariates themselves;
 * __Irregularity__
