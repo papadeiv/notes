@@ -1,3 +1,5 @@
+# LaTeX
+
 ## Installation
 ```bash
 sudo apt install latexmk

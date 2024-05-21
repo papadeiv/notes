@@ -1,3 +1,6 @@
+# Kitty terminal
+
+## Installation
 1. Install  
 ```bash
 sudo apt install kitty -y

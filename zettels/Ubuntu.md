@@ -1,3 +1,5 @@
+# Ubuntu
+
 ## Installation
 1. Download the distro.release.iso
 2. Install either balenaEtcher or Rufus

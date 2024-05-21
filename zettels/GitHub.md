@@ -1,3 +1,5 @@
+## Git & GitHub
+
 ## Workflow
 ![git_workflow](../figures/git_workflow.gif)
 

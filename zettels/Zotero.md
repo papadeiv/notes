@@ -1,3 +1,6 @@
+# Zotero
+
+## Installation
 1. Dowloand [Zotero 6 tarball](https://www.zotero.org/download/) and extract it
 ```bash
 untar -xf Zotero-linux64.tar

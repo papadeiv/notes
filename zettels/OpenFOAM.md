@@ -1,4 +1,6 @@
-## OpenFOAM
+# OpenFOAM
+
+## Installation
 1. Go to the [Gitlab development page](https://develop.openfoam.com/Development/openfoam/-/blob/master/doc/Build.md)
 2. Check the `Requirements build` first and `OpenFOAM build` second
 3. Download the `Source` archive and `Third Party` archive and put the latter into the former; the hierarchy should be: `/home/papadeiv/Librerie/OpenFOAM/ThirdParty`

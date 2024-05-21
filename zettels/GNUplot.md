@@ -1,3 +1,5 @@
+# GNUplot
+
 ```bash
 set terminal png enhanced size 1200,1200
 set output "file.png"
