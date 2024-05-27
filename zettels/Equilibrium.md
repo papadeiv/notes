@@ -16,12 +16,12 @@ They are the first object found in the analysis of dynamical systems. The linear
 
   > $x^{ * }$ is a _saddle_ if of all the eigenvalues (which have non-zero real parts) at least one has a different sign than the others;
 
-  > $x^{ * }$ is a _centre_ if it's non-hyperbolic i.e. there is at least one purely immaginary eigenvalue (that is with zero real part).
+  > $x^{ * }$ is a _centre_ if it's non-hyperbolic (that is with zero real part) and it is has at least one purely immaginary eigenvalue .
 
 * __Index__: based on index theory every equilibria has either index: 
-  > $[x^{ * }]=-1$ if it's a sink or a source;
+  > $[x^{ * }]=+1$ if it's a sink, a source or a centre;
 
-  > $[x^{ * }]=+1$ if it's a saddle.
+  > $[x^{ * }]=-1$ if it's a saddle.
 
 ## Examples
 * ??
