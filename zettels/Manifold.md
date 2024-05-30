@@ -19,11 +19,11 @@ In order to compute a manifold one must use the __Stable manifold theorem__:
 ## Properties
 * For planar systems (i.e. in $2D$) we have: 
   > $\det(D_f(x_0))=\lambda_1\lambda_2$ and $\text{tr}(D_f(x_0))=\lambda_1+\lambda_2$ meaning that:
-    - $\det(D_f(x_0))>0$ and $\text{tr}(D_f(x_0))>0$ then $x_0$ is a repeller and it has a $2-$dimensional unstable manifold $W^{(u)}(x_0)$;
-    - $\det(D_f(x_0))>0$ and $\text{tr}(D_f(x_0))<0$ then $x_0$ is an attractor and it has a $2-$dimensional stable manifold $W^{(s)}(x_0)$;
-    - $\det(D_f(x_0))<0$ then $x_0$ is a saddle and it has a $1-$dimensional unstable manifold $W^{(u)}(x_0)$ and a $1-$dimensional stable manifold $W^{(s)}(x_0)$;
-    - $\det(D_f(x_0))>0$ and $\text{tr}(D_f(x_0))=0$ then $x_0$ is a centre and it has a $2-$dimensional centre manifold $W^{(c)}(x_0)$;
-    - $\det(D_f(x_0))=0$ then $x_0$ is non-hyperbolic and it has a $1-$ or $2-$dimensional centre manifold $W^{(c)}(x_0)$.
+  >   - $\det(D_f(x_0))>0$ and $\text{tr}(D_f(x_0))>0$ then $x_0$ is a repeller and it has a $2-$dimensional unstable manifold $W^{(u)}(x_0)$;
+  >   - $\det(D_f(x_0))>0$ and $\text{tr}(D_f(x_0))<0$ then $x_0$ is an attractor and it has a $2-$dimensional stable manifold $W^{(s)}(x_0)$;
+  >   - $\det(D_f(x_0))<0$ then $x_0$ is a saddle and it has a $1-$dimensional unstable manifold $W^{(u)}(x_0)$ and a $1-$dimensional stable manifold $W^{(s)}(x_0)$;
+  >   - $\det(D_f(x_0))>0$ and $\text{tr}(D_f(x_0))=0$ then $x_0$ is a centre and it has a $2-$dimensional centre manifold $W^{(c)}(x_0)$;
+  >   - $\det(D_f(x_0))=0$ then $x_0$ is non-hyperbolic and it has a $1-$ or $2-$dimensional centre manifold $W^{(c)}(x_0)$.
 
 * Saddle-like equilibria may form homoclinic and heteroclinic connections through their manifolds and in particular the former connects $2$ distinct saddles while the latter connects a saddle to it-self through a loop. 
 

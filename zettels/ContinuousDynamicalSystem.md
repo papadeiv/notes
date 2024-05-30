@@ -11,6 +11,8 @@ In the most general setting it is a $(n+1)$ -dimensional vector field $f(x,t)$ t
 
 * [__Equilibria__](Equilibrium.md);
 
+* [__Invariant sets__](InvariantSet.md);
+
 * [__Periodic orbits__](PeriodicOrbit.md);
 
 * [__Manifolds__](Manifold.md);

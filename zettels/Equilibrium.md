@@ -2,7 +2,7 @@
 In a [continuous-time dynamical system](ContinuousDynamicalSystem.md) it is a point $x^{ * }$ in phase space s.t. $x^{'}=f(x^{ *  })=0$.
 
 ## Intuition
-Equilibria are points in which the dynamics prescribes a steady state, meaning that the state evolution is stationary.
+Equilibria are points in which the dynamics prescribes a steady-state, meaning that the state evolution is stationary.
 
 They are found at the intersections of distinct [nullclines](Nullcline.md).
 
