@@ -8,7 +8,6 @@ Key methodologies include [but not limited to](https://en.wikipedia.org/wiki/Tim
 - exponential smoothing; 
 - decomposition methods (ARIMA).
 
-## Intuition
 __Trends__: At the heart of time series analysis is the identification of trends over a period, typically through rolling aggregates that smooth out short-term fluctuations to reveal a long-term trend.
 
 __Seasonality__: Seasonality captures the repetitive and cyclical patterns in your data, occurring at regular intervals. Identifying these patterns is vital as they offer insights into predictable changes. Integrating your contextual knowledge about the dataset can greatly aid in making sense of these seasonal behaviors.
@@ -22,14 +21,9 @@ Once we decompose the series, we can explain what each component represents in t
 
 Integrating your understanding of the data’s context is crucial throughout each step of your analysis. Whether industry-specific knowledge or familiarity with specific patterns, this insight will help refine your models and projections, leading to more accurate and meaningful models.
 
-## Properties
-* __??__
-  > ??
-* __??__
-  > ??
-
 ## Examples
 * __??__
   > ??
+
 * __??__
   > ??

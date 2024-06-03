@@ -3,10 +3,8 @@ For a [dynamical system](DynamicalSystem.md) it is an [invariant set](InvariantS
 
 They are associated to the eigenspaces of the Jacobian of the system evaluated at the equilibria.
 
-## Intuition
 Manifolds are usually indicated as $W^{(u,s,c)}(x_0)$ where $x_0$ is usually not the origin of the phase space.
 In such case one has to find an [homeomorphism](Homeomorphism.md) $x = h(y)$ that maps orbits of $\dot{x}=f(x)$ close to $x_0$ to orbits of the linearised system $\dot{y}=D_{f}(y=0)\,y$ close to $0$ as per the __Hartman-Grobman theorem__.
-
 
 In order to compute a manifold one must use the __Stable manifold theorem__:
 - linearise the system $\dot{x}=f(x)$ around its equilibrium $x_0$, i.e. computing $\dot{x}\approx D_{f}(x=x_0)\,x$;
@@ -16,7 +14,6 @@ In order to compute a manifold one must use the __Stable manifold theorem__:
   - if $\mathfrak{Re}(\lambda)=0$ the eigenspace $E^c$ is a [centre manifold](CentreManifold.md) and its dynamics has to be solved approximately; 
 - the manifold $W$ has the same dimension and is locally tangent to $E$ close to $x_0$.
 
-## Properties
 * For planar systems (i.e. in $2D$) we have: 
   > $\det(D_f(x_0))=\lambda_1\lambda_2$ and $\text{tr}(D_f(x_0))=\lambda_1+\lambda_2$ meaning that:
   >   - $\det(D_f(x_0))>0$ and $\text{tr}(D_f(x_0))>0$ then $x_0$ is a repeller and it has a $2-$dimensional unstable manifold $W^{(u)}(x_0)$;
@@ -30,5 +27,6 @@ In order to compute a manifold one must use the __Stable manifold theorem__:
 ## Examples
 * ??
   > ??
+
 * ??
   > ??

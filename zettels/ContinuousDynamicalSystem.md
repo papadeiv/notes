@@ -1,9 +1,6 @@
 # Continuous dynamical system
 In the most general setting it is a $(n+1)$ -dimensional vector field $f(x,t)$ that describes the pointwise in space and instantaneous dynamics of $n$ -dimensional state variables in phase space.
 
-## Intuition
-
-## Properties
 * __Time-dependence__: depending on the time-dependence of the vector field the system (and underlying ODE) can either be:
   > _autonomous_: meaning that the vector field does not change with time i.e. $f(x,t)=f(x)$;
 
@@ -22,5 +19,6 @@ In the most general setting it is a $(n+1)$ -dimensional vector field $f(x,t)$ t
 ## Examples
 * ??
   > ??
+
 * ??
   > ??
