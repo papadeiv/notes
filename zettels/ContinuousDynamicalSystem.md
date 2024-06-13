@@ -14,6 +14,8 @@ In the most general setting it is a $(n+1)$ -dimensional vector field $f(x,t)$ t
 
 * [__Manifolds__](Manifold.md);
 
+* [__Structural stability__](StructuralStability.md);
+
 * [__Bifurcations__](Bifurcation.md).
 
 ## Examples
