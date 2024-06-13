@@ -7,7 +7,7 @@ They are found at the intersections of distinct [nullclines](Nullcline.md).
 
 They are the first object found in the analysis of dynamical systems. The linearisation of the system in a small neighbourgh of each equilibria allows to find the [manifolds](Manifold.md) of the system.
 
-* __Stability__: by analising the eigenvalues of the Jacobian evaluated at the equilibrium $D_{f}(x=x^{ * })$ you can determine the stability of such point: 
+* [__Stability__](https://en.wikipedia.org/wiki/Stability_theory): by analising the eigenvalues of the Jacobian evaluated at the equilibrium $D_{f}(x=x^{ * })$ you can determine the stability of such point: 
   > $x^{ * }$ is a _stable equilibria/attractor/sink_ if all the eigenvalues have (strictly) negative real parts;
 
   > $x^{ * }$ is an _unstable equilibria/repeller/source_ if all the eigenvalues have (strictly) positive real parts;
