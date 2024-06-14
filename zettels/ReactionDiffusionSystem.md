@@ -1,6 +1,6 @@
 # Reaction-diffusion system
 
-It is a type of high-dimensional dynamical system modelling an unsteady physical phenomena with the absence of advection/convection/transport.
+It is a type of [high-dimensional dynamical system](HighDimensionalSystem.md) modelling an unsteady physical phenomena with the absence of advection/convection/transport.
 
 The general equation for a scalar field $u(\boldsymbol{x},t)$ reads
 

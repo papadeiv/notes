@@ -1,5 +1,5 @@
 # Equilibrium
-In a [continuous-time dynamical system](ContinuousDynamicalSystem.md) it is a point $x^{ * }$ in phase space s.t. $x^{'}=f(x^{ *  })=0$.
+In a [continuous-time dynamical system](ContinuousTimeSystem.md) it is a point $x^{ * }$ in phase space s.t. $x^{'}=f(x^{ *  })=0$.
 
 Equilibria are points in which the dynamics prescribes a steady-state, meaning that the state evolution is stationary.
 

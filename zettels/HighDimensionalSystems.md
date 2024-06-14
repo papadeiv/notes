@@ -1,6 +1,6 @@
 # High-dimensional dynamical systems
 
-It is the generalization of [continuous-time dynamical systems](ContinuousDynamicalSystems.md) to infinite dimensional variables, i.e. instead of a finite dimensional vector variable, whose temporal evolution is described through a set of ordinary differential equations
+It is the generalization of [continuous-time dynamical systems](ContinuousTimeSystem.md) to infinite-dimensional variables, i.e. instead of a finite dimensional vector variable, whose temporal evolution is described through a set of ordinary differential equations
 
 $\dot{\boldsymbol{x}}=f(\boldsymbol{x};\boldsymbol{\mu}),\quad\boldsymbol{x}\in\mathbb{R}^n$
 

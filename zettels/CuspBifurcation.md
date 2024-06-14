@@ -1,5 +1,5 @@
 # Cusp bifurcation 
-Codim-2 bifurcation in [continuous-time dynamical systems](ContinuousDynamicalSystems.md) parametrised by mu and rho where the quadratic coefficient of the [saddle-node bifurcation](SaddleNodeBifurcation.md) vanishes. 
+Codim-2 bifurcation in [continuous-time dynamical systems](ContinuousTimeSystem.md) parametrised by mu and rho where the quadratic coefficient of the [saddle-node bifurcation](SaddleNodeBifurcation.md) vanishes. 
 The normal form is $x^{'}=f(x;\mu,\rho)=\pm x^3 +\mu x + \rho$. 
 
 To study the system you need to fix one parameter first (e.g. set $\mu<0$ or $\mu>0$) and then track the bifurcations that occur as a function of the other parameter.

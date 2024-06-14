@@ -1,10 +1,10 @@
 # Manifold
-For a [dynamical system](DynamicalSystem.md) it is an [invariant set](InvariantSet.md) associated to an [equilibria](Equilibrium.md). It is an important object that affects the local and global behaviour of trajectories in phase space.
+For a [dynamical system](ContinuousTimeSystem.md) it is an [invariant set](InvariantSet.md) associated to an [equilibria](Equilibrium.md). It is an important object that affects the local and global behaviour of trajectories in phase space.
 
 They are associated to the eigenspaces of the Jacobian of the system evaluated at the equilibria.
 
-Indicated as $W^{(u,s,c)}(x_0)$ where $x_0$ is usually not the origin of the phase space.
-In such case one has to find an [homeomorphism](Homeomorphism.md) $x = h(y)$ that maps orbits of $\dot{x}=f(x)$ close to $x_0$ to orbits of the linearised system $\dot{y}=D_{f}(y=0)y$ close to $0$ as per the __Hartman-Grobman theorem__.
+They are indicated as $W^{(u,s,c)}(x_0)$ where $x_0$ is usually not the origin of the phase space.
+In such case one has to find an [homeomorphism](Homeomorphism.md) $x = h(y)$ that maps orbits of $\dot{x}=f(x)$ close to $x_0$ to orbits of the linearised system $\dot{y}=D_{f}(y=0)y$ close to $0$ as per the [Hartman-Grobman theorem](HartmanGrobmaTheorem.md).
 
 In order to compute a manifold one must use the __Stable manifold theorem__:
 - linearise the system $\dot{x}=f(x)$ around its equilibrium $x_0$, i.e. computing $\dot{x}\approx D_{f}(x=x_0)x$;
