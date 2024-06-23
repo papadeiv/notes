@@ -13,7 +13,7 @@ In $1$ spatial dimension the equation is known as the [Kolmogorov-Petrovsky-Pisk
 * if $f(u;\mu)=0$ then the system reduces to the heat equation whose steady state $u^{* }(\boldsymbol{x})$ is a solution of the Laplace's equation;
 * if $f(u;\mu)=u(1-u)$ the equation is known as [Fisher-KPP](F-KPPequation.md) (F-KPP) equation;
 * the generalisation $f(u;\mu)=u(1-u^p)$ where $p\geq2$ is known as the [Newell–Whitehead-Segel](NWSequation.md) (NWS) equation; 
-* if $f(u)=-\varepsilon^{-2}\phi(u)$ where $\phi(u):=\Phi^{'}(u)$ is the derivative of a (non-negative) double-well potential  the equation is known as [Allen-Cahn](ACequation.md) (AC) equation;
+* if $f(u)=-\varepsilon^{-2}\phi(u)$ where $\phi(u):=\Phi^{'}(u)$ is the derivative of a (non-negative) potential $\Phi(x)$ the equation is known as [Allen-Cahn](ACequation.md) (AC) equation;
 * if $\boldsymbol{f}(\boldsymbol{q};\boldsymbol{\mu})=[\mu u - u^3 -\lambda v, \epsilon^{-1}(u-v)]$ the equation is known as [FitzHugh-Nagumo](FHNequation.md) (FHN) equation;
 
 ## Bifurcations 
