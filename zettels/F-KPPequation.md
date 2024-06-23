@@ -1,5 +1,5 @@
 # Fisher-Kolmogoroff-Petrovsky-Piscounoff equation
-[Link](https://en.wikipedia.org/wiki/KPP%E2%80%93Fisher_equation)
+[WikiLink](https://en.wikipedia.org/wiki/KPP%E2%80%93Fisher_equation)
 
 It is the particular case of a [KPP equation](KPPequation.md) where the non-linear reaction term if of the form $f(u)=u(1-u)$.
 

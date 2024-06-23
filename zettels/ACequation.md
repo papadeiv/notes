@@ -1,6 +1,5 @@
 # Allen-Cahn equation
-[Link](https://en.wikipedia.org/wiki/Allen%E2%80%93Cahn_equation)
-
+[WikiLink](https://en.wikipedia.org/wiki/Allen%E2%80%93Cahn_equation)
 
 It is a prototypical example of a semi-linear, parabolic PDE, or [reaction-diffusion equation](ReactionDiffusionSystem.md).
 

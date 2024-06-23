@@ -1,5 +1,5 @@
 # FitzHugh-Nagumo equation
-[Link](https://en.wikipedia.org/wiki/FitzHugh%E2%80%93Nagumo_model)
+[WikiLink](https://en.wikipedia.org/wiki/FitzHugh%E2%80%93Nagumo_model)
 
 It is the prototypical model for the analysis of activator ( $u$ ) inhibitor ( $v$ ) dynamics in which $u$ produces the growth of both $u$ and $v$ while $v$ inhibits their growth.
 
