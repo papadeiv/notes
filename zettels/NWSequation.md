@@ -4,7 +4,7 @@ Introduced in 1969 indipendently by [Newell-Whitehead](https://www-cambridge-org
 
 It is a prototypical model for the study of [Turing patterns](TuringBifurcation.md) and instabilities and it has beenused in particular to describe [Rayleigh-Benard convection](https://en.wikipedia.org/wiki/Rayleigh%E2%80%93B%C3%A9nard_convection) instability of standing waves solutions.
 
-The cubic case $f(u)=u-u^3=u(1-u^2)$ is reminiscent of a (supercritical) [pitchfork](PitchforkBifurcation.md) normal form with an unstable ground-state $u(x)=0$ coexisting with two more (non-trivial) homogeneous steady states $u(x)=\pm1$.
+The cubic case $f(u)=u-u^3=u(1-u^2)$ is reminiscent of a (supercritical) [pitchfork](PitchforkBifurcation.md) normal form with an unstable ground-state $u(x)=0$ coexisting with two more (non-trivial) homogeneous steady states $u(x)=\pm1$ and it is equivalent to the real part of the [GL equation](GLequation.md).
 
 * In @6PJ97YBZ#Zemskov_2014 the $2-$ dimensional NWS equation is shown to arise naturally after the non-linear analysis of striped pattern solutions.
 * * In @LHMXPJP3#Chu_2020 a First Integral Method (FIM) is used to derive exact solutions of NWS of the form $f(u)=u(1-u^2)$.

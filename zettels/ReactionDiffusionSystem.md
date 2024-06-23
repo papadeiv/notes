@@ -5,9 +5,13 @@ It is a type of [high-dimensional dynamical system](HighDimensionalSystem.md) mo
 
 The general equation for a scalar field $u(\boldsymbol{x},t)$ reads
 
-$\partial_t u = \sigma\Delta u + f(u;\mu)$
+$\partial_t u = \mathcal{D}u + f(u;\mu)$
 
-where $f(u;\mu)$ is a (parametric) non-linear forcing term modelling reaction.
+where $\mathcal{D}=g(u,\Delta u, \sigma)$ is a function of diffusion and $f(u;\mu)$ is a (parametric) non-linear forcing term modelling reaction.
+
+## Linear diffusion
+
+We categorise some examples of the form $g(u, \Delta u, \sigma)=\sigma\Delta u$ .
 
 In $1$ spatial dimension the equation is known as the [Kolmogorov-Petrovsky-Piskunov](KPPequation.md) (KPP) equation. Notable cases are given:
 * if $f(u;\mu)=0$ then the system reduces to the heat equation whose steady state $u^{* }(\boldsymbol{x})$ is a solution of the Laplace's equation;
@@ -15,6 +19,11 @@ In $1$ spatial dimension the equation is known as the [Kolmogorov-Petrovsky-Pisk
 * the generalisation $f(u;\mu)=u(1-u^p)$ where $p\geq2$ is known as the [Newell–Whitehead-Segel](NWSequation.md) (NWS) equation; 
 * if $f(u)=-\varepsilon^{-2}\phi(u)$ where $\phi(u):=\Phi^{'}(u)$ is the derivative of a (non-negative) potential $\Phi(x)$ the equation is known as [Allen-Cahn](ACequation.md) (AC) equation;
 * if $\boldsymbol{f}(\boldsymbol{q};\boldsymbol{\mu})=[\mu u - u^3 -\lambda v, \epsilon^{-1}(u-v)]$ the equation is known as [FitzHugh-Nagumo](FHNequation.md) (FHN) equation;
+
+## Non-linear diffusion 
+
+* If $g(u,\Delta u, \sigma) = (1+i\alpha)\Delta u$ and $f(u;\mu)=u(1-(1+i\beta)|u|^2)$ the equation is known as the [Ginzburg-Landau](GLequation.md) (GL) equation;
+* if $g(u,\Delta u, \sigma) = -(1+\Delta)^2 u$ and $f(u;\mu)=\mu u + N(u)$ , with $N(u)$ smooth and non-linear, the equation is known as the [Swift-Hohenberg](SHequation.md) (SH) equation.
 
 ## Bifurcations 
 
