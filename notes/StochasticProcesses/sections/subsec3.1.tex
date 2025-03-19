@@ -1,0 +1,37 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\subsection{The adjoint equation}\label{subsec3.1}
+Consider the SDE \cite[Sub-section 4.3.1, p.93]{Gardiner03}
+\begin{equation*}
+        dx = f(x,t)dt + \sqrt{g(x,t)}dW\,,
+\end{equation*}
+then the FPE \cite[Sub-section 4.3.4, p.96]{Gardiner03} reads
+\begin{equation*}
+     \partial_{t}p(x,t|y,0) = -\partial_{x}\big(f(x,t)p(x,t|y,0)\big)+\frac{1}{2}\partial_{xx}^{2}\big(g(x,t)p(x,t|y,0)\big)\,.
+\end{equation*}
+The adjoint FPE \cite[Section 3.6, p.55]{Gardiner03} reads
+\begin{equation*}
+     \partial_{t}p(x,0|y,t) = -f(y,t)\partial_{y}p(x,0|y,t)-\frac{1}{2}g(y,t)\partial_{yy}^{2}p(x,0|y,t)\,.
+\end{equation*}
+If both $f$ and $g$ are time-independent then the solution $x(t)$ is said to be \textit{homogeneous} \cite[Section 3.7, p.56]{Gardiner03} and as such its conditional transition probability is
+\begin{equation*}
+     p(x,t|y,0) = p(x,0|y,-t)\,,
+\end{equation*}
+\begin{equation*}
+     \partial_{t}p(x,t|y,0)=\partial_{t}p(x,0|y,-t)=-\partial_{(-t)}p(x,0|y,-t)\,,
+\end{equation*}
+where the last equality is guaranteed by the chain-rule
+\begin{equation*}
+     g(x)=-x\,,\quad \big(f\circ g\big)(x) = g\big(f(x)\big) = -f(x)\,.
+\end{equation*}
+\begin{equation*}
+     \frac{dg}{dx} = \frac{dg}{df}\frac{df}{dx} = -\frac{df}{dx}\,.
+\end{equation*}
+It follows immediately that the adjoint FPE can be rewritten as 
+\begin{align*}
+        \partial_{t}p(x,0|y,t) &= -\partial_{(-t)}p(x,0|y,-t) = -\Big(-f(y)\partial_{y}p(x,0|y,-t)-\frac{1}{2}g(y)\partial_{yy}^{2}p(x,0|y,-t)\Big) = \nonumber \\ 
+                                     &=  f(y)\partial_{y}p(x,0|y,-t)+\frac{1}{2}g(y)\partial_{yy}^{2}p(x,0|y,-t) = \nonumber \\
+                                     &=  f(y)\partial_{y}p(x,t|y,0)+\frac{1}{2}g(y)\partial_{yy}^{2}p(x,t|y,0) = \nonumber \\
+                                     &= -\partial_{t}p(x,t|y,0) \,.
+\end{align*}
+\end{document}

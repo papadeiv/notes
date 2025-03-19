@@ -22,3 +22,14 @@ pde2path, v3.1. Setting library path beginning with /home/pde2path
 Setting additional libraries /home/ilupackV2.4_GNU64_long_MUMPS/mex
 using ilupack from tu-BS
 ```
+
+## Case setup
+1. Create a folder in the `pde2path/demos` subdir
+2. The hierarchy in such folder is
+- `cmds1d.m` for the simulation commands (continuation runs and plots of bifurcation diagrams)
+  - `shinit.m` for initialising the fields of the `problem` structure (see `pde2path/Quickstart guide.pdf`)
+    - `sG.m` for computing the rhs operator
+    - `sGjac.m` for computing the Jacobian of the rhs
+      - `njac.m` for the numerical approximation of the Jacobian of the rhs
+    - `shbra1d.m`
+      - `shJ.m`

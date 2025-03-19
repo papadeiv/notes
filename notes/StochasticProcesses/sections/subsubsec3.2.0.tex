@@ -1,0 +1,79 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\subsubsection{Stationary distribution of the OUP}\label{subsec3.2.0}
+We now use the result of Thorem \ref{thm3.2.1} to derive the stationary distribution of the OUP.
+\begin{theorem}[label=thm2.3.4.2]{}{}
+     Let $x_{t}$ be the solution of the OUP $dx = -\theta(x-\mu)\,dt + \sigma dW$ then $x_{t}\sim \mathcal{N}(\mu,\frac{\sigma^{2}}{2\theta})$ when $t\to+\infty$.
+\end{theorem}
+\begin{proof}
+The proof can be derived by considering the solution of the OUP (see sub-section \ref{subsec2.1}) conditioned on $x(0)=x_{0}$
+\begin{equation*}
+     x_{t} = \mu + (x_{0}-\mu)\,e^{-\theta t} + \sigma \int_{0}^{t}e^{-\theta(t-s)}ds\,,
+\end{equation*}
+whose time-dependent distribution is
+\begin{equation*}
+     x_{t}\sim \mathcal{N}\bigg(\mu + (x_{0}-\mu)\,e^{-\theta t}, \frac{\sigma^{2}}{2\theta}\Big(1-e^{-2\theta t}\Big)\bigg)\,,
+\end{equation*}
+and then taking the asymptotic limit $t\to+\infty$ to get
+\begin{equation*}
+     x_{\infty}\sim \mathcal{N}\bigg(\mu,\frac{\sigma^{2}}{2\theta}\bigg)\,.
+\end{equation*}
+Here instead we want to obtain the same result by solving the steady-state ODE and determining the constants involved in the $N(x)$ as per Theorem \ref{thm3.2.1}.
+For the OUP we write 
+\begin{equation*}
+        f(x)=-\theta (x-\mu)=-\newprime{V}(x)\,\Rightarrow\,V(x)=\theta\Big(\frac{x^{2}}{2} - \mu x\Big)\,,
+\end{equation*}
+so that the stationary FPE reads 
+\begin{equation*}
+        \newprime{\bigg(\newprime{p}+\frac{2\theta(x-\mu)}{\sigma^2}\,p\bigg)}=\newprime{\bigg(\newprime{p}+\frac{x-\mu}{D}\,p\bigg)}=0\,,\quad D:=\frac{\sigma^{2}}{2\theta}\,.
+\end{equation*}
+In order for $p(x)$ to be a pdf a necessary condition is that it decays to $0$ in the unbounded domain $(-\infty,+\infty)$, together with its first-order derivative.
+As such we specify the BCs
+\begin{equation*}
+     p(x),\newprime{p}(x)\to 0\,,\quad x\to\pm\infty\,,
+\end{equation*}
+in order to formulate an IVP for our ODE and thus get a unique solution for $p(x)$.
+We therefore integrate the second-order ODE in $(-\infty,x]$ to get
+\begin{equation*}
+        \int_{-\infty}^{x}\newprime{\bigg(\newprime{p}(y)+\frac{y-\mu}{D}\,p(y)\bigg)}dy = \bigg(\newprime{p}(x)+\frac{x-\mu}{D}\,p(x)\bigg)-\cancelto{0}{\lim_{x\to-\infty}\bigg(\newprime{p}(x)+\frac{x-\mu}{D}\,p(x)\bigg)}=\newprime{p}(x)+\frac{x-\mu}{D}\,p(x)=0\,,
+\end{equation*}
+which is a (reduced) first-order, linear, homogeneous ODE.
+We rescale the independent variable
+\begin{equation*}
+        \tilde{x} := x-\mu\,,
+\end{equation*}
+to ease the computations.
+The integrating factor is
+\begin{equation*}
+        h(\tilde{x}) = e^{\frac{1}{D}\int_{}^{}\tilde{x}dx} = C_{1}\,e^{\frac{\tilde{x}^{2}}{2D}}\,,
+\end{equation*}
+which we multiply to both sides of our ODE to get
+\begin{equation*}
+        e^{\frac{\tilde{x}^{2}}{2D}}\newprime{p}(\tilde{x})+\frac{\tilde{x}}{D}\,e^{\frac{\tilde{x}^{2}}{2D}}\,p(\tilde{x})=\newprime{\bigg(e^{\frac{\tilde{x}^{2}}{2D}}\,p(\tilde{x})\bigg)}=0\,.
+\end{equation*}
+We integrate again to obtain
+\begin{equation*}
+        \int_{}^{}\newprime{\bigg(e^{\frac{\tilde{x}^{2}}{2D}}\,p(\tilde{x})\bigg)}d\tilde{x} = e^{\frac{\tilde{x}^{2}}{2D}}\,p(\tilde{x}) + C_{2} = 0\,,
+\end{equation*}
+which yields our unnormalised solution
+\begin{equation*}
+        p(\tilde{x})=-C_{2}\,e^{-\frac{\tilde{x}^{2}}{2D}}=N\,e^{-\frac{\theta\tilde{x}^{2}}{\sigma^2}}\,,\quad N:=-C_{2}\,.
+\end{equation*}
+We then need to compute the normalisation constant $N>0$ by imposing the identity between the integral of the pdf in $(-\infty,+\infty)$ and $1$
+\begin{equation*}
+        1 = \int_{-\infty}^{+\infty}p(\tilde{x})d\tilde{x} = N \int_{-\infty}^{+\infty}e^{-\frac{\theta(x-\mu)^{2}}{\sigma^{2}}}dx\,.
+\end{equation*}
+By recalling that
+\begin{equation*}
+        \int_{-\infty}^{+\infty}e^{-\alpha(x+\beta)^{2}}dx = \sqrt{\frac{\pi}{\alpha}}\,,
+\end{equation*}
+we get that the value of the normalisation constant is
+\begin{equation*}
+        N = \frac{1}{\int_{-\infty}^{+\infty}e^{-\frac{\theta}{\sigma^{2}}(x-\mu)^{2}}dx} = \sqrt{\frac{\theta}{\sigma^{2}\pi}}\,,
+\end{equation*}
+and thus our stationary solution of the FPE for the OUP in fully explicit form
+\begin{equation*}
+        p(x) = \sqrt{\frac{\theta}{\sigma^{2}\pi}}\,e^{-\frac{\theta}{\sigma^{2}}(x-\mu)^{2}}\,.
+\end{equation*}
+\end{proof}
+\end{document}

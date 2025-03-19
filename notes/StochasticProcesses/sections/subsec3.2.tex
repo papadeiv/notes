@@ -1,0 +1,43 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\subsection{Stationary solutions}\label{subsec3.2}
+Stationary solutions of the FPE are important when considering the asymptotic, steady-state distribution of a stochastic process.
+\begin{theorem}[label=thm3.2.1]{}{}
+        Let $f(x)=-\newprime{V}(x)$ be a smooth vector field and $dx = -\newprime{V}(x)\,dt + \sigma dW$ a non-linear SDE in Langevin form with additive diffusion, then the stationary solution of the associated FPE is $p_{\text{eq}}(x)=N(x)\,e^{-\frac{V(x)}{D}}$ where $N(x)=N\bigg(\int_{}^{}e^{\frac{V(x)}{D}}dx - C\bigg)$, with $N>0$ being a normalisation constant, $C\in \mathbb{R}$ an integration constant and $D=\frac{\sigma^{2}}{2}$.
+\end{theorem}
+\begin{proof}
+     We first rewrite the FPE assuming stationarity of the pdf, i.e. $p(x,t)=p(x)$
+     \begin{equation*}
+          \partial_{t}p(x) = 0 = \partial_{x}(\newprime{V}(x)p(x)) + D\partial_{xx}p(x) = \newprime{(\newprime{V}(x)p(x))} + D \pprime{p}(x)\,,
+     \end{equation*}
+     where in the second step we used the notation of differentiation for ODEs.
+     In the following we will drop the explicit dependence on $x$ of the functions involved to simplify the notation.
+     We now divide both sides by $D$ and compactify the differentials as per the sum rule of differentiation 
+     \begin{equation*}
+             %\underbrace{\pprime{p}+D^{-1}\,\newprime{(\newprime{V}p)}}_{\blacklozenge}=\underbrace{\newprime{(\newprime{p} + D^{-1}\,\newprime{V}p)}}_{\bigstar}=0\,,
+             \pprime{p}+D^{-1}\,\newprime{(\newprime{V}p)}=\newprime{(\newprime{p} + D^{-1}\,\newprime{V}p)}=0\,,
+     \end{equation*}
+     We integrate both sides to get
+     \begin{equation*}
+         \newprime{p}+\frac{\newprime{V}}{D}\,p = C_{1}\,. 
+     \end{equation*}
+     The above is a linear, first-order ODE with constant forcing $C_{1}$: we can then compute the solution analytically \cite[Theorem 2.1, p.1]{DynSys} using the integrating factor
+     \begin{equation*}
+             h(x) = e^{\frac{1}{D}\int_{}^{}\newprime{V}(x)dx} = e^{\frac{V(x)}{D}+\frac{c}{D}} = e^{\frac{V(x)}{D}}\underbrace{e^{\frac{c}{D}}}_{=:C_{2}} = C_{2}\,e^{\frac{V(x)}{D}}\,,
+     \end{equation*}
+     which, multiplied to both sides of the ODE leads to 
+     \begin{equation*}
+             C_{2}\,e^{\frac{V}{D}}\newprime{p} + C_{2}\frac{\newprime{V}}{D}e^{\frac{V}{D}}\,p = \cancel{C_{2}}\newprime{\Big(e^{\frac{V}{D}}\,p\Big)} = C_{1}\cancel{C_{2}}\,e^{\frac{V}{D}}\,.
+     \end{equation*}
+     Integrating both sides again yields our (stationary) solution
+     \begin{equation*}
+          \int_{}^{}\newprime{\Big(e^{\frac{V}{D}}\,p\Big)}dx = \Big(e^{\frac{V}{D}}\,p\Big) + C_{3} = C_{1}\,\int_{}^{}e^{\frac{V}{D}}dx\,,
+     \end{equation*}
+     \begin{equation*}
+             p(x) = e^{-\frac{V(x)}{D}}\bigg(C_{1}\int_{}^{}e^{\frac{V(x)}{D}}dx - C_{3}\bigg) = e^{-\frac{V(x)}{D}}C_{1}\bigg(\int_{}^{}e^{\frac{V(x)}{D}}dx - \frac{C_{3}}{C_{1}}\bigg) = \underbrace{N\bigg(\int_{}^{}e^{\frac{V(x)}{D}}dx - C \bigg)}_{:=N(x)}e^{-\frac{V(x)}{D}}\,,
+     \end{equation*}
+     where $N:=C_{1}$ and $C:=\frac{C_{3}}{C_{1}}$.
+\end{proof}
+% Stationary distribution of the OUP 
+\subfile{subsubsec3.2.0}
+\end{document}
