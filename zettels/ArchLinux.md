@@ -68,35 +68,31 @@ cd ../ && rm -r yay-bin
 ```bash
 sudo yay -Syu
 ```
-5. Install a bunch of stuff
+5. Install a bunch of stuff: browser, editor, terminal, shell prompt, app launcher and status bar
 ```bash
-sudo yay -S google-chrome neovim wl-clipboard python-pynvim kitty
+sudo yay -S google-chrome neovim wl-clipboard python-pynvim kitty extra/starship rofi 
+```
+[nerd fonts](https://github.com/ryanoasis/nerd-fonts) icons and logos
+```bash
+sudo yay -S extra/otf-geist-mono-nerd extra/texlive-fontsextra extra/xorg-fonts-misc extra/freetype2 extra/adwaita-icon-theme extra/bdf-unifont aur/siji-git extra/ttf-linux-libertine 
+```
+developer's tools
+```bash
+sudo yay -S juliaup openssH xournalpp 
+```
+multimedia packages
+```bash
+sudo yay -S kvantum zathura vlc flameshot 
 ```
 
 ## Configuration
-- [] Browser: sign into your Google account and enable sync-in 
-  - [] Sign into Tick-Tick
-  - [] Sign into Feeder 
-  - [] Sign into Github 
-- []  [Github](Github.md)
-- [] Desktop Environment (DE): [KDE Plasma](KDEPlasma.md)
-- [] Terminal: [Kitty](Kitty.md)
-- [] Text editor: [Neovim](Neovim.md)
-- []  [Neovim](Neovim.md)
-- []  [LaTeX](LaTeX.md) compiler
-
-## Troubleshooting
-
-- [] syslog
-1. Get the name of the process that is using a lot of CPU
-```bash
-sudo tail /var/log/syslog
-```
-2. Kill it
-```bash
-killall <name_of_the_process>
-```
-3. Clear the log file
-```bash
-sudo truncate -s 0 /var/log/syslog
-```
+- Browser: sign into your Google account and enable sync-in 
+  - Sign into Tick-Tick
+  - Sign into Feeder 
+  - Sign into Github 
+- [Github](GitHub.md)
+- Text editor: [Neovim](Neovim.md)
+- Terminal: [Kitty](Kitty.md)
+- Desktop Environment: [KDE Plasma](KDEPlasma.md)
+- [ssh](SSH.md)
+- [LaTeX](LaTeX.md) compiler

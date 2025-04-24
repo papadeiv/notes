@@ -1,6 +1,20 @@
-First establish a VPN connection to the server, then
+# SSH
+
+## Connection to UoA servers
+1. First establish a VPN connection
+
+2. Connect to the server via `ssh`
 ```bash
-ssh -X username@server.domain
+ssh your_upi@aitken.math.auckland.ac.nz
+```
+3. Look which of the computational servers is less busy and connect into that
+```bash
+ssh your_upi@forder.math.auckland.ac.nz
+```
+4. To execute Julia scripts have a look at the __Installation on a server__ paragraph in [Julia](Julia.md)
+
+5. To run a `screen` session:
+```bash
 screen -S <session_name>
 echo $STY
 ```

@@ -1,17 +1,23 @@
 # Kitty terminal
 
-## Installation
-1. Install  
+## Installation (Ubuntu and Debian only, skip this if on Arch)
+1. Install kitty 
 ```bash
 sudo apt install kitty -y
 ```
-2. Set it up as the default terminal
-```bash
-sudo update-alternatives --config x-terminal-emulator
-```
-3. Configure it by copying the dotfiles in the `~/.config/kitty/` directory
-4. Install Starship
+2. Install starship
 ```bash
 curl -sS https://starship.rs/install.sh | sh
 ```
-5. Configure it by copying the dotfile in the `~/.config/starship/`
+
+## Configuration
+1. Set kitty as the default terminal (Ubuntu only, skip if on Arch)
+```bash
+sudo update-alternatives --config x-terminal-emulator
+```
+2. Copy your dotfiles in the `~/.config/` directory
+```bash
+cp ./dotfiles/.bashrc .
+cp ./dotfiles/kitty ./.config/
+cp ./dotfiles/starship ./.config/
+```
