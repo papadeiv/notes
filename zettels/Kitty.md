@@ -21,3 +21,6 @@ cp ./dotfiles/.bashrc .
 cp ./dotfiles/kitty ./.config/
 cp ./dotfiles/starship ./.config/
 ```
+3. Edit the `.config/kitty/kitty.conf` file accordingly (`font_size` entry is on line `27`)
+
+4. To change to a new colorscheme type `kitten themes` in the terminal and scroll to the one you like.
