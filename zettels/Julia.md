@@ -38,9 +38,11 @@ include("./your_script.jl")
 julia
 ```
 2. Go into Package Manager mode by typing `]`
+
 3. Type the following
 ```bash
 add DifferentialEquations LinearAlgebra Statistics StatsBase Roots ForwardDiff Integrals Polynomials DataFrames Tables CSV PyCall CairoMakie Makie LaTeXStrings ProgressMeter 
 ```
 4. Type `backspace` to go back in Prompt mode and execute `include("filename.jl")`
+
 5. Type `ctrl + d` to exit the REPL

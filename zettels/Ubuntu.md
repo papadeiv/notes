@@ -38,25 +38,3 @@ then do
 sudo apt purge --auto-remove
 ```
 and restart!
-
-## Configuration
-- [] Shortcuts
-1. Home folder: `super + e`
-2. Web browser: `super + return`
-3. Settings: `ctrl + q`
-
-## Troubleshooting
-
-- [] syslog
-1. Get the name of the process that is using a lot of CPU
-```bash
-sudo tail /var/log/syslog
-```
-2. Kill it
-```bash
-killall <name_of_the_process>
-```
-3. Clear the log file
-```bash
-sudo truncate -s 0 /var/log/syslog
-```

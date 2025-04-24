@@ -85,6 +85,13 @@ multimedia packages
 sudo yay -S kvantum zathura vlc flameshot 
 ```
 
+6. Set the correct timezone if wrong
+```bash
+timedatectl status
+timedatectl list-timezones 
+timedatectl set-timezone your_zone/your_subzone 
+```
+
 ## Configuration
 - Browser: sign into your Google account and enable sync-in 
   - Sign into Tick-Tick

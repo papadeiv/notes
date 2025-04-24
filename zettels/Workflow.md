@@ -1,7 +1,18 @@
-# My setup
-List of Neovim keybindings, snippets, shortcuts and more
+# Workflow 
 
-## Normal mode
+## System shortcuts
+
+### File explorer
+- `Meta + e` = launch
+- `Ctrl + t` = open new tab
+- `Ctrl + w` = close tab
+- `Ctrl + Shift + Tab` = walk through tabs
+- `Ctrl + Shift + n` = create new folder
+- `Alt + Left arrow` = go back
+
+## Neovim keybindings, snippets and shortcuts
+
+### Normal mode
 - <leader>w = write/save file
 - <leader>q = close file 
 - <S-Tab> = shuffle between buffers 
@@ -13,12 +24,12 @@ List of Neovim keybindings, snippets, shortcuts and more
 - w = shuffle forward by words
 - b = shuffle backward by words
 
-## LaTex (vimtex)
+### LaTex (vimtex)
 - \ll = compile target
 - \ls = change target to current .tex
 - <Tab> = trigger snippet autocompletion
 - <S-Tab> = suffle through snippet insertion points
-### Snippets
+#### Snippets
 - ss = superscript
 - uu = underscript
 - eqref = reference equation
@@ -32,13 +43,13 @@ List of Neovim keybindings, snippets, shortcuts and more
 - interp = Interpretation environment
 - interpcont = Continued interpretation
 
-## Zotero (zotcite)
+### Zotero (zotcite)
 - <leader>zi = print title of the ref
 - <leader>za = print full details of the ref
 - <leader>zo = openf PDF of the ref
 - <C-Space> = complete the ref
 
-## File explorer (nvim-tree)
+### File explorer (nvim-tree)
 - <leader>e = toggle tree visibility
 - <leader>tf = open floating terminal
 - i = Open file/folder
