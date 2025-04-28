@@ -10,6 +10,9 @@
 - `Ctrl + Shift + n` = create new folder
 - `Alt + Left arrow` = go back
 
+### Rofi
+- `Alt + Space` = launch
+
 ## Neovim keybindings, snippets and shortcuts
 
 ### Normal mode

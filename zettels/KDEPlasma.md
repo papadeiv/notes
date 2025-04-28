@@ -1,5 +1,11 @@
 # KDE Plasma Desktop Environment 
 
+## Kvantum
+Install the `kvantum` theme engine and the `?`... 
+```bahs
+sudo yay -S kvantum 
+```
+
 ## Configuration
 1. Shortcuts
 ```bash
@@ -28,6 +34,12 @@ System Settings > Keyboard > Shortcuts > Add New > Kitty
     - Launch: `Ctrl + Alt + T`
     - Open a New Tab: `Ctrl + Shift + T` 
     - Walk Though Tabs: `Ctrl + Shift + Right` and `Ctrl + Shift + Left`
+
+```bash
+System Settings > Keyboard > Shortcuts > Add New > Rofi 
+```
+  - Rofi 
+    - Launch: `Alt + Space`
 
 2. Color themes 
   - Kvantum
@@ -73,9 +85,11 @@ System Settings > Default Applications > Terminal emulator: kitty
 System Settings > Window Management > Task Switcher > Visualization > Large icons
 System Settings > Window Management > Desktop Effects > Hide Cursor > Tick 
 System Settings > Window Management > Desktop Effects > Background Contrast > Tick 
-System Settings > Window Management > Desktop Effects > Blur > Tick 
+System Settings > Window Management > Desktop Effects > Blur > Tick > Click on gear icon to change noise and blur strength (both of them on 5th to last tick) 
 System Settings > Window Management > Desktop Effects > Translucency > Tick 
 System Settings > Window Management > Desktop Effects > Magic Lamp > Tick > Configure > 350 milliseconds 
+System Settings > Window Management > Window Rules > Application settings for systemsettins > Edit (pencil icon) > Match whole window class: Yes, Window types: All selected  
+System Settings > Window Management > Window Rules > Window settings for systemsettins > Edit (pencil icon) > Match whole window class: Yes, Window types: All selected  
 ```
 
 6. Task manager (bottom bar)

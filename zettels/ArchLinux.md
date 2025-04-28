@@ -68,9 +68,9 @@ cd ../ && rm -r yay-bin
 ```bash
 sudo yay -Syu
 ```
-5. Install a bunch of stuff: browser, editor, terminal, shell prompt, app launcher and status bar
+5. Install a bunch of stuff: browser, editor, terminal, shell prompt and app launcher
 ```bash
-sudo yay -S google-chrome neovim wl-clipboard python-pynvim kitty extra/starship rofi 
+sudo yay -S google-chrome neovim wl-clipboard python-pynvim kitty extra/starship rofi-wayland 
 ```
 [nerd fonts](https://github.com/ryanoasis/nerd-fonts) icons and logos
 ```bash
@@ -78,11 +78,19 @@ sudo yay -S extra/otf-geist-mono-nerd extra/texlive-fontsextra extra/xorg-fonts-
 ```
 developer's tools
 ```bash
-sudo yay -S juliaup openssH xournalpp 
+sudo yay -S base-devel juliaup cmake extra-cmake-modules openssH man qt6-tools ntfs-3g
+```
+research's tools
+```bash
+sudo yay -S zathura xournalpp 
 ```
 multimedia packages
 ```bash
-sudo yay -S kvantum zathura vlc flameshot 
+sudo yay -S spotify spicetify-cli vlc flameshot 
+```
+Upon installing `Spotify` you'll need to go through the T&Cs. To accept immediately press `Shift + q`. Finally create the `/mnt/tmp/` directory for mounting/unmounting USB external devices
+```bash
+sudo mkdir /mnt/tmp
 ```
 
 6. Set the correct timezone if wrong
@@ -92,14 +100,29 @@ timedatectl list-timezones
 timedatectl set-timezone your_zone/your_subzone 
 ```
 
+7. Update once more and reboot
+```bash
+sudo yay -Syu
+reboot
+```
+
 ## Configuration
-- Browser: sign into your Google account and enable sync-in 
-  - Sign into Tick-Tick
-  - Sign into Feeder 
-  - Sign into Github 
-- [Github](GitHub.md)
-- Text editor: [Neovim](Neovim.md)
-- Terminal: [Kitty](Kitty.md)
-- Desktop Environment: [KDE Plasma](KDEPlasma.md)
-- [ssh](SSH.md)
-- [LaTeX](LaTeX.md) compiler
+Follow the steps below in order: each step has multiple choices depending on your customisation.
+- Configure the browser (whichever choice, sign into your Google account and enable sync-in as first thing)
+  - Chrome
+  - Firefox
+- Configure [Git & Github](GitHub.md)
+- Text editor
+  - [Neovim](Neovim.md)
+- Terminal
+  - [Kitty](Kitty.md)
+  - Alacritty
+- Desktop environment
+  - [KDE Plasma](KDEPlasma.md)
+  - GNOME
+- App launcher
+  - [Rofi](Rofi.md)
+  - dmenu
+- Configure the [SSH](SSH.md) connection
+- Configure the [LaTeX](LaTeX.md) compiler
+- Configure [Spicetify](Spicetify.md)

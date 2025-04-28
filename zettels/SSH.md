@@ -40,3 +40,8 @@ If instead you want to kill one session while keeping others running, then
 ```bash
 screen -X -S <session_name> kill
 ```
+
+6. To disconnect from the server run
+```bash
+exit
+```
