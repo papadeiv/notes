@@ -16,8 +16,8 @@ sudo ln -s ~/.julia/juliaup/julia-1.10.0+0.x64.linux.gnu/bin/julia /usr/local/li
 2. Launch Julia from the binary
 ```bash
 ls -a
-cd ./juliaup/bin/
-julia
+cd ./.juliaup/bin/
+./julia
 ```
 3. Clone a GitHub repository (to do that you need to authenticate first, check the __Configuration__ paragraph in [GitHub](GitHub.md))
 ```bash

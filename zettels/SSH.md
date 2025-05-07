@@ -9,7 +9,7 @@ ssh your_upi@aitken.math.auckland.ac.nz
 ```
 3. Look which of the computational servers is less busy and connect into that
 ```bash
-ssh your_upi@forder.math.auckland.ac.nz
+ssh forder.math.auckland.ac.nz
 ```
 4. To execute Julia scripts have a look at the __Installation on a server__ paragraph in [Julia](Julia.md)
 

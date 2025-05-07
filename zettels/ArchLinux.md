@@ -78,7 +78,7 @@ sudo yay -S extra/otf-geist-mono-nerd extra/texlive-fontsextra extra/xorg-fonts-
 ```
 developer's tools
 ```bash
-sudo yay -S base-devel juliaup cmake extra-cmake-modules openssH man qt6-tools ntfs-3g
+sudo yay -S base-devel juliaup cmake extra-cmake-modules openssH man qt6-tools gparted ntfs-3g
 ```
 research's tools
 ```bash
