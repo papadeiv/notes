@@ -7,7 +7,11 @@
 ```bash
 ssh your_upi@aitken.math.auckland.ac.nz
 ```
-3. Look which of the computational servers is less busy and connect into that
+3. Look which of the computational servers is less busy 
+```bash
+htop
+```
+and connect into that
 ```bash
 ssh forder.math.auckland.ac.nz
 ```

@@ -101,9 +101,9 @@ Left click on bar > Show Panel Configuration > Hoover over System Tray > Remove
 7. Status bar (top bar)
 ```bash
 Left click on left bar (Task manager) > Show Panel Configuration > Add Panel > Application Menu Bar > Exit Edit Mode 
-Left click on top bar (Status bar) > Add or Manage Widgets > System Tray, Digital Clock > Exit Edit Mode  
-Left click on top bar > Show Panel Configuration > Panel Settings > Add Spacer > Right clik on System Tray and Digital Clock and drag them to the RHS of the Spacer > Leave Global Menu on the LHS 
-Left click on top bar > Show Panel Configuration > Panel Settings > Add Spacer > Place the spacer between the Clock and the Tray so that the Clock now sits in the middle of the status bar 
+Left click on top bar (Status bar) > Add or Manage Widgets > System Tray, Trashcan, Digital Clock > Exit Edit Mode  
+Left click on top bar > Show Panel Configuration > Panel Settings > Add Spacer > Right clik on System Tray, Trashcan and Digital Clock and drag them to the RHS of the Spacer > Leave Global Menu on the LHS 
+Left click on top bar > Show Panel Configuration > Panel Settings > Add Spacer > Place the spacer between the Clock and the Trashcan + Tray block so that the Clock now sits in the middle of the status bar 
 Left click on top bar > Show Panel Configuration > Panel Settings > Add Spacer > Place the spacer on the RHS of the Tray and untogle Flexible Size > Spacer Width: 10  
 Left click on top bar > Show Panel Configuration > Panel Settings > Visibility: Dodge windows, Opacity: Translucent, Panel Height: 34 
 ```
