@@ -41,7 +41,7 @@ julia
 
 3. Type the following
 ```bash
-add ModelingToolkit DifferentialEquations DomainSets MethodOfLines LinearAlgebra Statistics StatsBase Roots ForwardDiff Integrals Polynomials DataFrames Tables CSV PyCall CairoMakie Makie LaTeXStrings TerminalLoggers ProgressMeter Suppressor 
+add ModelingToolkit DifferentialEquations DomainSets MethodOfLines LinearAlgebra Statistics StatsBase LsqFit Roots ForwardDiff Integrals Polynomials DataFrames Tables CSV PyCall CairoMakie Makie LaTeXStrings TerminalLoggers ProgressMeter Suppressor 
 ```
 4. Type `backspace` to go back in Prompt mode and execute `include("filename.jl")`
 
