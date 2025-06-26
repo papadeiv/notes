@@ -1,0 +1,258 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+     \section{Introduction}\label{sec1}
+     \begin{definition}[Autonomous ODE]\label{def1}
+          An autonomous Ordinary Differential Equations (ODEs) is a differential equation of the form
+          \begin{equation}\label{eq1}
+                  \dot{x} = V(x)
+          \end{equation}
+          where $V:\mathbb{R}^{n}\to \mathbb{R}^{n}$ is a continuous map.
+     \end{definition}
+     \begin{definition}[]\label{def2}
+          Let $x_0\in \mathbb{R}^{n}$ be an initial condition of \ref{eq1} then the map
+          \begin{equation}\label{eq2}
+               \mathcal{C}^{1}\ni x:\mathbb{R}\to \mathbb{R}^{n}
+          \end{equation}
+          is a (global) solution of \ref{eq1} if $\dot{x}(t) = V(x(t))\,,\;\forall t\in \mathbb{R}$.
+     \end{definition}
+     \begin{interpretation*}{}
+             Take a continuous and pointwise differentiable map $x\in \mathcal{C}^{1}([-\epsilon,\epsilon])$ defined over a small (centered) interval $[-\epsilon,\epsilon]$ whose images are points in $\mathbb{R}^{n}$
+             \begin{equation}\label{eq3}
+                  t \mapsto \boldsymbol{x}(t) = (x_{1}(t), \dots, x_{j}(t), \dots, x_{n}(t))
+             \end{equation}
+             Now the $t-$derivative would be
+             \begin{equation}\label{eq4}
+                     \boldsymbol{\dot{x}}(t)= (\dot{x_{1}}(t),\dots, \dot{x_{j}}(t), \dots,\dot{x_{n}}(t))
+             \end{equation}
+             i.e. the derivative vector coincides with the vector field $V(x)\,,\;\forall t\in[-\epsilon,\epsilon]$. So basically we are looking for a $n-$dimensional parametric curve (integrak curve) that pointwise follows (i.e. is tangetial pointwise) to the vector field for each value of $t$. We can interpret $\boldsymbol{V}$ as the velocity field of a machanical system in space and $\boldsymbol{x}(t)$ being the trajectory of a particle transported by such field.
+     \end{interpretation*}
+\begin{remark*}
+     Local and global refers to the domain of $\boldsymbol{x}(t)$ and not to the \textit{size} of the image.
+\end{remark*}
+\begin{remark*}
+        The ODE in \ref{eq1} is said non-autonoumus if $\boldsymbol{V}(\boldsymbol{x},t)$, i.e. the vector field is also $t-$dependent and thus the shape of the curve (local solution) changes with $t$.
+\end{remark*}
+     \begin{definition}[Cauchy problem]\label{def3}
+          An autonoumus ODE paired with an initial condition
+          \begin{equation}\label{eq5}
+             \begin{cases}
+                     \boldsymbol{\dot{x}}(t) = \boldsymbol{V}(\boldsymbol{x}(t)) \,, \\
+                     \boldsymbol{x}(0) = \boldsymbol{x}_{0} \,, 
+             \end{cases}
+          \end{equation}
+          is said to be a Cauchy problem for $\boldsymbol{x}(t)$.
+     \end{definition}
+     \begin{theorem}[label=thm1]{}{}
+             Let $\boldsymbol{\dot{x}}=\boldsymbol{V}(\boldsymbol{x})\,,\; \boldsymbol{V}: \mathbb{R}_{n}\to \mathbb{R}_{n}$ Lipschitz then $\forall \boldsymbol{x}_{0}\in \mathbb{R}^{n}\quad \exists ! \boldsymbol{x}(t)$ solution of the Cauchy problem \ref{eq5} and it depends continuously on $\boldsymbol{x}_{0}$.
+     \end{theorem}
+\begin{remark*}
+     $\boldsymbol{V}:\mathbb{R}^{n}\to \mathbb{R}^{n}$ is locally Lipschitz if $\forall \boldsymbol{x}_{0}\in \mathbb{R}^{n}\quad \exists \mathcal{U}\subset \mathcal{B}(\boldsymbol{x_{0}})$ and $k>0$ s.t.
+     \begin{equation}\label{eq6}
+          |\boldsymbol{V(x)}-\boldsymbol{V(y)}|\leq k|x-y|\,,\quad\forall \boldsymbol{x}, \boldsymbol{y}\in \mathcal{U}
+     \end{equation}
+\end{remark*}
+\begin{remark*}
+    By continuous dependence (of the solution) on the initial condition we mean that $\forall t \in \mathbb{R}^{n}\,,\quad |\boldsymbol{x}(t) - \boldsymbol{y}(t)|\to 0$ as $|\boldsymbol{x}_{0}-\boldsymbol{y}_{0}|\to 0$. 
+\end{remark*}
+   \begin{figure}[H]
+       \centering 
+       %\includegraphics[keepaspectratio, width=\textwidth]{}
+       \caption{A solution is continuously dependent on its initial condition $\boldsymbol{x}_{0}$ if, by fixing $t\in \mathbb{R}$, we are always able to find a neighborouing initial condition $\boldsymbol{x}_{0}$ whose trajectory at time $t$ is close to the trajectory spawned by $\boldsymbol{x}_{0}$ at the same time.}
+       \label{fig}
+   \end{figure}
+   \begin{example}[label=ex1]{}{}
+           $a,x\in \mathbb{R}$ s.t. $\dot{x}=V(x)=a\,x$. Their solutions are of the form $x(t)=x_{0}e^{at}$ for a given initial condition $x_{0}$. If I put the solution inside the linear first-order ODE I get $\dot{x}(t)=x_{0}ae^{at}=ax_{0}e^{at}=ax(t)=V(x)$, so it satisfies the identity.
+   \end{example}
+   \begin{example}[label=ex2]{}{}
+        \begin{equation}\label{eq7}
+           \begin{cases}
+                   \dot{x} = 3x^{\frac{2}{3}} \,, \\
+              x_{0} = 0 \,, 
+           \end{cases}
+        \end{equation}
+        Notice that $x(t)=0$ and $y(t)=t^{3}$ are both solutions of the same Cauchy problem since
+        \begin{equation}\label{eq8}
+           \begin{cases}
+                   \dot{x}(t) = 0 = V(x) \,, \\
+                   \dot{y}(t) = 3y^{2} = 3 (y^{3})^{\frac{2}{3}} = 3 y(t) = V(y)\,, 
+           \end{cases}
+        \end{equation}
+        However this apparent contradiction of Theorem \ref{thm1} does not hold because $V(x)$ is not locally Lipschitz (e.g. $x=0$).
+   \end{example}
+   \begin{example}[label=ex3]{}{}
+        \begin{equation}\label{eq9}
+           \begin{cases}
+                   \dot{x}(t) = 1+ x^{2} \,, \\
+                   x_{0} = x(0) \,, 
+           \end{cases}
+        \end{equation}
+        Solutions of the above are of the form $x(t)=\tan(t+c)$ where $c:=\arctan(x_{0})$, in fact
+        \begin{equation}\label{eq10}
+                \dot{x}(t) = 1+\tan^{2}(t+c) = 1 + x^{2}(t) = V(x)
+        \end{equation}
+       Notice however how each of these solutions are defined on the interval $t\in I=(-c-\frac{\pi}{2},\frac{\pi}{2}-c)$ while their images are the whole $\mathbb{R}$. Therefore $x(t)=\tan(t+c)$ are local solutions blowing to infinity in a finite time.
+   \end{example}
+   \begin{definition}[Dynamical system]\label{def4}
+           Let $\dot{x}=V(x)$, $V(x)$ Lipschitz and $\forall t\in \mathbb{R}$ let
+           \begin{align}\label{eq11}
+                   f^{t}:& \mathbb{R}^{n}\to \mathbb{R}^{n} \nonumber \\
+                         & x_{0}\to x(t)
+           \end{align}
+           where $x(t)$ is the solution associated to the initial condition $x_{0}$. Then the family $\{f^{t}\}_{t\in \mathbb{R}}$ of (bijective) time $t$ maps of the ODE is a dynamical system.
+   \end{definition}
+   \begin{observation}\label{obs1}
+        The following properties are observed:
+        \begin{itemize}
+             \item $f^{0}(x_{0}) = x_{0}$ (identity map);
+             \item $f^{s}\circ f^{t}(x_{0}) = f^{t}\circ f^{s}(x_{0}) = f^{s+t}(x_{0})$ (composition of maps corresponds of glueing the end of map $f^{t}(x_{0})=:x(t)$ with the beginning of $f^{s}(x(t))$, which is indeed another map);
+             \item $f^{-t}\circ f^{t}(x_{0}) = f^{0}(x_{0}) = x_{0}$ (existance of the inverse element).
+        \end{itemize}
+        which suggest that there is an inherent mathematical structure to the time $t$ maps of an ODE. Indeed $\{f^{t}\}_{t\in \mathbb{R}}$ is a group (of transformations) in $\mathbb{R}$ under composition, often called the \textbf{flow} of the ODE, that defines the underlying dynamical system.
+   \end{observation}
+   The mathematical notion of a dynamical system is thus intertwined with group theory and in particular we say that a \hl{dynamical system} is a group of transformations in \hl[LimeGreen]{continuous time} $\{f^{t}\}_{t\in \mathbb{R}}$ (also defined as the flow of the ODE) or in \hl[LimeGreen]{discrete time} $\{f^{n}\}_{n\in \mathbb{Z}}$ which are the \textit{iterates} of any invertible map $f:\mathcal{X}to \mathcal{X}$; if $f$ is instead an arbitrary map (i.e. not necessarily invertible) then we can iterate forward only thereby making $\{f^{n}\}_{n\in \mathbb{Z}}$ is a (discrete) semi-group of transformations.
+\begin{definition}[Forward orbit]\label{def5}
+     Let $\mathcal{X}$ be an arbitraty set and $f:\mathcal{X}\to \mathcal{X}$ an arbitrary map and $x_{0}\in \mathcal{X}$ an initial condition then the set of all iterates of $x_{0}$
+     \begin{equation}\label{eq11}
+             \theta^{+}(x_{0}) = \{f^{n}(x_{0})\}_{n\in \mathbb{N}} = \{X_{n}\}_{n\in \mathbb{N}}
+     \end{equation}
+     is defined as forward orbit.
+\end{definition}
+\begin{observation}\label{obs2}
+        If $f$ is invertible then $\ref{eq11}$ defines a \hl{full orbit} of the ODE. Also if $f(x_{0})=x_{0}$ then $x_{0}$ is a \hl[WildStrawberry]{fixed point} of the ODE; if $\exists k \geq 1$ s.t. $f^{k}(x_{0}) = x_{0}$ then $x_{0}$ is a periodic orbit of the ODE and $\theta^{+}(x_{0}) = \{x_{0},x_{1},\dots,x_{k-1}\}$.
+\end{observation}
+\begin{definition}[]\label{def6}
+     Let $f:\mathcal{X}\to \mathcal{X}$, $f:\mathcal{Y}\to \mathcal{Y}$ be two maps are conjugate if $\exists h:\mathcal{X}\to \mathcal{Y}$ bijective s.t. $h\circ f = g \circ h$.
+     \begin{figure}[H]
+         \centering 
+         %\includegraphics[keepaspectratio, width=\textwidth]{}
+         \caption{Bijection $h$ applied between the set ofs $\mathcal{X}$ and $\mathcal{Y}$.}
+         \label{fig2}
+     \end{figure}
+\end{definition}
+\begin{observation}\label{obs3}
+     Two maps $f,g$ are conjugates via $h$ entails that $f=h^{-1}\circ g \circ h$ and, in general
+     \begin{equation}\label{eq12}
+          f^{n}=(h^{-1}\circ g \circ h)^{n}=h^{-1} \circ g^{n} \circ h
+     \end{equation}
+\end{observation}
+\begin{observation}\label{obs4}
+     Conjugacy is an equivalence relation, meaning that the set of all maps $f: \mathcal{X}\to \mathcal{X}$ can be partitioned in a infinite number of equivalence classes within each one  every possible map is conjugate to every other map in the same equivalence class.
+\end{observation}
+\begin{definition}[]\label{def7}
+     $\mathcal{X}$ is a topological space and $f:\mathcal{X}\to \mathcal{X}$ is a continuous map, $x_{0}\in \mathcal{X}$, then the $\omega-$limit set is defined as
+     \begin{equation}\label{eq13}
+             \omega(x_{0}) = \{z\in \mathcal{X}\;:\; f^{n_{j}}(x_{0}) \to z \; \text{for some subsequence} \; n_{j}\to\infty\}
+     \end{equation}
+\begin{figure}[H]
+    \centering 
+    %\includegraphics[keepaspectratio, width=\textwidth]{}
+    \caption{If $x_{0}$ is not periodic then $\theta^{+}(x_{0})$ is countable infinite and thus the $\omega-$limit is the accumulation point of the orbit.}
+    \label{fig3}
+\end{figure}
+\end{definition}
+\begin{observation}\label{obs5}
+     If $f$ is invertible then we define the $\alpha-$limit as
+     \begin{equation}\label{eq14}
+             \alpha (x_{0}) = \{z\in \mathcal{X}\;:\;f^{-n_{j}}(x_{0})\to z \; \text{for some subsequence} \; n_{j}\to\infty\}
+     \end{equation}
+\end{observation}
+\begin{definition}[]\label{def8}
+     $f:\mathcal{X}\to \mathcal{X}$, $g:\mathcal{Y}\to \mathcal{Y}$ are topologically conjugate if $\exists h:\mathcal{X}\to  \mathcal{Y}$ homeomorphism s.t. $h \circ f = g \circ h$.
+\end{definition}
+\begin{remark*}\label{obs6}
+     Topologically conjugate maps also preserve the $\omega-$limits i.e. $h(\omega(x_{0}))=\omega(h(x_{0}))$.
+\end{remark*}
+\begin{proof}
+     Exercise.
+\end{proof}
+\begin{definition}[Attraction points]\label{def9}
+        $P\in \mathcal{X}$ is \textit{attracting} if $\exists \mathcal{U}(P)$ s.t. $\omega(x_{0})=\{P\}\,,\;\forall x_{0}\in \mathcal{U}(P)$.
+\end{definition}
+\begin{definition}[Repulsion points]\label{def10}
+        If $f$ is invertible then  $P$ is \textit{repelling} if $\exists \mathcal{U}(P)$ s.t. $\alpha(x_{0})=\{P\}\,,\;\forall x_{0}\in \mathcal{U}(P)$.
+\end{definition}
+\begin{definition}[]\label{def11}
+        $\mathfrak{X}$ is the space of all (continuous) maps on some (topological) space $\mathcal{X}$, $\{f_{\lambda}\}_{\lambda\in \mathbb{R}}$ be a family of maps $f_{\lambda}:\mathcal{X}\to \mathcal{X}$ then $\mathfrak{X}$ is structurally stable if $\forall f\in \mathfrak{X}$ the map $f$ belongs to the interior of its conjugacy class
+\end{definition}
+\begin{interpretation*}{}
+     The notion of structural stability of the topological space of families of dynamical systems arises from the practical applications in science and engineering. Indeed when modelling real-world phenomenon a number of uncertainties and approximations are encountered either in constructing the model itself via idealisations (e.g. ignoring air friction in physics classes), or errors in measurements for the coefficients and initial conditions of the system.
+     If the space $\mathfrak{X}$ is structurally stable it means that those uncertainties do not matter so much in quantifying the correct evolution of the dynamical system because if I pick an arbitrarly small perturbation $\lambda_{0}$ (reppresenting the imprecise/uncertain measurements of the dynamical system) of the real (absolutely precise) parameter $\lambda$ then the evolution of $f_{\lambda_{0}}$ will preserve the same structures of the real (absolutely precise) dynamical system $f_{\lambda}$.
+     That's because $\mathfrak{X}$ stable $\Rightarrow$ every family of maps $f_{\lambda}$ belongs to the interior of its conjugacy class $\Rightarrow$ the perturbation $\lambda_{0}$ is not a \hl[LimeGreen]{bifurcation}.
+     \begin{figure}[H]
+         \centering 
+         %\includegraphics[keepaspectratio, width=\textwidth]{}
+         \caption{Structurally stable spaces of dynamical system do not feature bifurcations.}
+         \label{fig4}
+     \end{figure}
+\end{interpretation*}
+\begin{definition}[Fundamental domains]\label{def12}
+     Let $X$ a set, $f:X\to X$ invertible, $X^{'}\subseteq X$ invariant (sub-)set $(f(X^{'}=X^{'}))$ then $\mathcal{U}\subseteq X^{'}$ is a fundamental domain for $X^{'}$ if $\forall x \in X^{'}\,,\;\exists ! \tau = \tau(x) \in \mathbb{Z)}$ s.t. $f^{\tau}(x)\in \mathcal{U}$ is unique.
+\end{definition}
+\begin{interpretation*}{}
+     A fundamental domain $\mathcal{U}$ of an invariant subset $\mathcal{X}^{'}$ is a subdomain of $\mathcal{X}^{'}$ for which each and every one of its orbit crosses once and only once $\mathcal{U}$.
+\end{interpretation*}
+\begin{lemma}
+        $f:X\to X$, $g:Y\to Y$ two maps and $X^{'}\subseteq X$, $Y^{'}\subseteq Y$ two invariant subsets, $\mathcal{U}\subseteq X^{'}$ and $\mathcal{V}\subseteq Y^{'}$ fundamental domains, if $\exists \tilde{h}:\mathcal{U}\to \mathcal{V}$ bijection then $f|_{X^{'}}$ and $g|_{Y^{'}}$ are conjugate.
+\end{lemma}
+\begin{proof}
+     Let's define a bijection $h:X^{'}\to Y^{'}$ and $\forall x \in X^{'}$ we let $\tau = \tau(x)$ s.t. 
+     \begin{equation*}          
+             h(x):=g^{\tau(x)} \circ \tilde{h} \circ f^{\tau(x)}
+     \end{equation*}
+     Notice that $\tau(f(x))=\tau(x) -1$; then $h \circ f(x)= (g^{-\tau(f(x))}\circ\tilde{h}\circ f^{\tau(f(x))}) (f(x))= (g^{-\tau(x)+1}\circ\tilde{h}\circ f^{\tau(f(x))+1})(x) = (g^{-\tau(x)}\circ \tilde{h}\circ f^{\tau(x)})(x) = (g\circ g^{-\tau(x)}\circ\tilde{h}\circ f^{\tau(x)})(x)=g\circ h(x)$.
+\end{proof}
+
+     \begin{figure}[H]
+         \centering 
+         %\includegraphics[keepaspectratio, width=\textwidth]{}
+         \caption{Sketch of the proof}
+         \label{fig5}
+     \end{figure}
+So in principle if I am able to find a bijection between two fundamental domains of two distinct invariant subsets than I can extend the conjugacy to the entirity of the two subsets. 
+\begin{example}[label=ex2]{}{}
+     Let us study the case of \textbf{1-dimensional linear maps} of the type $A:\mathbb{R}\to \mathbb{R}$, $A(x)=a\,x$, $a\in \mathbb{R}$. The dynamics of these maps can be studies by observing that $A^{n}(x)=a^{n}x$ meaning that the maps converges to $0$ forward in time $n\to\infty$if $a<1$ i.e. $0$ is a attraction point. Furthermore:
+     \begin{itemize}
+          \item $A$ is invertible if $a\neq 0$;
+          \item $A$ is hyperbolic if $a\neq \pm 1$;
+          \item if $a>1$ then $0$ is a repulsion point;
+     \end{itemize}
+     Let us construct the fundamental domain for $A(x)=a\,x$; if $a\in(0,1)$ then, intuitevely any subset $(a \tilde{x},\tilde{x}]$, for some $\tilde{x}>0$, is a fundamental domain. 
+     Now, given any two linear maps $A(x)=a\,x$ and $B(x)=b\,x$ let us try to find a bijection $f:\,\mathbb{R}\,\to \mathbb{R}$ between the two fundamental domains of the two maps; turns out there are infinitely many ways we can do that if both $a,b\in(0,1)$.
+\end{example}
+\begin{proposition*}
+     Any two invertible, hyperbolic, $1-$dimensional linear maps $A(x)\,,\; B(x)$ are conjugate. They are topologically conjugate $\iff$:
+     \begin{itemize}
+          \item their fixed points are both either attracting $|a|,|b| < 1$ or repelling $|a|,|b| > 1$;
+          \item they are both either orientation preserving  $a,b < 0$ or orientation reversing $a,b < 0$.
+     \end{itemize}
+\end{proposition*}
+From the last two points we derive that \textit{linear maps have 4 topological conjugacy classes} i.e.
+\begin{itemize}
+     \item $(-\infty, -1)$;
+     \item $(-1, 0)$;
+     \item $(0, 1)$;
+     \item $(1, +\infty)$.
+\end{itemize}
+What about $\mathcal{C^{1}}-$conjugacy? Does it introduce finer conjucacy classes for linear maps?
+\begin{proposition*}
+     Let $f:\,\mathbb{R}\,\to \mathbb{R}$ and $g:\,\mathbb{R}\,\to \mathbb{R}$ be two $\mathcal{C}^{1}$ diffeomorphisms which are $\mathcal{C}^{1}-$conjugates s.t. $\exists h:\,\mathbb{R}\,\to \mathbb{R}$ diffeomorphism $h \circ f = g \circ h$ and also let $p,q$ be two fixed points for $f,g$ respectively with $q=h(p)$ then $\newprime{f}(p)=\newprime{g}(q)$.
+\end{proposition*}
+\begin{proof}
+     By definition of conjugacy $f = h^{-1} \circ g \circ h$ and by the chain rule
+     \begin{equation*}
+             \newprime{f}(x) = \newprime{(h^{-1} \circ g \circ h)}(x)= \newprime{(h)^{-1}(x)}\newprime{g(h(x))} \newprime{g}(h(x))\newprime{h(x)}.
+     \end{equation*}
+     Now since $p$ is a fixed point and $h(p)=q$ then
+    \begin{align*}
+            \newprime{f}(p)=&\newprime{(h^{-1}(p))}\newprime{g(h(p))}\newprime{g}(h(p))\newprime{h}(p)
+ = \nonumber \\
+            =& \newprime{(h^{-1})}(g(q))\newprime{g}(q)\newprime{h}(p) = \nonumber \\  
+    =& \newprime{(h^{-1})}(q)\newprime{g}(q)\newprime{h}(p)=\newprime{g}(q)
+    \end{align*}
+     where at the last step we applied $\newprime{(h^{-1})}(q)=\newprime{(h^{-1})}(h(p))=(\newprime{h}(p))^{-1}$.
+\end{proof}
+From this it follows that since $x=0$ is a fixed point for any linear maps $A(x)=ax$ and $\newprime{A}(x=0)=a$ then any two linear maps $A(x)=ax$ and $B(x)=bx$ cannot be $\mathcal{C}^{1}-$conjugate if $a\neq b$; this means that there are \textit{infinitely (unconutably)} many $\mathcal{C}^{1}-$conjugacy classes for linear maps because any linear map is conjugate to itself under the identity homeomorphism $h=\mathcal{I}$. This result makes $\mathcal{C}^{1}-$conjugacy is a very weak conjugacy grouping for linear maps.
+\begin{observation}\label{obs9}
+     Any invertible, hyperbolic linear map is structurally stable w.r.t. topological conjugacy class whereas any linear map is structurally unstable w.r.t. $\mathcal{C}^{1}-$conjugacy.
+\end{observation}
+\end{document}

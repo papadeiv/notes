@@ -1,0 +1,15 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\subparagraph{Useful integral identities}\label{subpar:int_id}
+\begin{itemize}
+        \item univariate $k-$th degree polynomial $p\in \mathbb{P}_{k}[x]$ with real coefficients $\{c_{0},\dots,c_{k}\}\subset\mathbb{R}$
+                \begin{equation}\label{eq:pol_int}
+                        \int_{a}^{b} p(x) dx = \int_{a}^{b}\bigg(\sum_{k=0}^{m}c_{k}x^{k}\bigg)dx = \sum_{k=0}^{m}c_{k}\bigg(\int_{a}^{b} x^{k} dx \bigg) = \sum_{k=0}^{m}c_{k}I_{k}\,,\quad I_{k}:=\frac{b^{k+1} - a^{k+1}}{k+1}\,;
+                \end{equation}
+        \item absolute value of an odd degree monomial in $[a,b]$ with $a < 0 < b$
+                \begin{equation}\label{eq:abs_mon_int}
+                        \int_{a}^{b}|x^{k}|dx = \int_{a}^{0}|x^{k}|dx + \int_{0}^{b}|x^{k}|dx = - \int_{a}^{0} x^{k} dx + \int_{0}^{b} x^{k} dx = \frac{a^{k+1} + b^{k+1}}{k+1}\,;
+                \end{equation}
+\end{itemize}
+
+\end{document}

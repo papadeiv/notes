@@ -1,0 +1,154 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+     \section{High-dimensional systems}\label{sec3}
+     We will mainly look at \textit{linear maps} in high dimensions, i.e. any $A:\,\mathbb{R}^{n}\,\to \mathbb{R}^{n}$ s.t. $A(\alpha x + \beta y)=\alpha A(x) + \beta A(y)\,,\;\forall \alpha,\beta\in \mathbb{R}$ and $\forall x,y\in \mathbb{R}^{n}$.
+     \begin{definition}[Spectrum]\label{def1}
+          $\lambda\in \mathbb{R}$ is called eigenvalue of $A$ if it is a solution of $\text{det}(A-\lambda I)=0$. The spectrum of $A$ is the set $\text{Sp}(A)$ of all eigenvalues of $A$.
+     \end{definition}
+     \begin{definition}[]\label{def2}
+          $A$ is invertible $\iff$ $\text{det}A\neq0$; $A$ is hyperbolic $\iff$ $|\lambda|\neq1\,,\;\forall \lambda\in \text{Sp}(A)$; finally $A$ has distinct eigenvalues if all its eigenvalueshave moltiplicity $1$.
+     \end{definition}
+    Let us consider the case $n=2$; the linear map is a $2\times2$ matrix and its $2$ eigenvalues have a known form, namely
+    \begin{equation}\label{eq1}
+            \lambda=\frac{a_{11}+a_{22}\pm\sqrt{(a_{11}+a_{22})^{2}-4(a_{11}a_{22}-a_{23}a_{32})}}{2}
+    \end{equation}
+    We make the assumption by which the matrix is diagonal (i.e. $a_{23}=a_{32}=0$); the $n-$action of the matrix on some (initial) vector $v_{0}=[v_{o}^{(1)},v_{o}^{(2)}]$ is as follows
+    \begin{equation}\label{eq3}
+          A^{n}v_{0}=
+          \begin{bmatrix}
+                  \lambda_{1}^{n} & 0 \\
+                  0 & \lambda_{2}^{n}
+          \end{bmatrix}
+          \begin{bmatrix}
+                  v_{0}^{(1)} \\
+                  v_{0}^{(2)}
+          \end{bmatrix}
+          = 
+          \begin{bmatrix}
+               \lambda_{1}^{n}v_{0}^{(1)} \\
+               \lambda_{2}^{n}v_{0}^{(2)}
+          \end{bmatrix}
+    \end{equation}
+   As shown in the figure below, for different values of the eigenvalues the system will feature either an \textit{attracting point} or a \textit{repelling point} at $x=0$ or it will feature a saddle point. 
+    \begin{figure}[H]
+        \centering 
+        %\includegraphics[keepaspectratio, width=\textwidth]{../figures/.png}
+        \caption{Action of the linear, $2-$dimensional, diagonal linear map onto some initial vector $v_{o}$ for different values of $\lambda_{1},\lambda_{2}$.}
+        \label{fig1}
+    \end{figure}
+    Although quite specific, the case of diagonal maps allow us to extend it to the more general case of arbitrary $2\times 2$ maps, at least those that can be diagonalised i.e. $\exists P$ invertible s.t. $D=P^{-1}A\,P$. 
+In fact by rewriting the previous equality as $P\,D=A\,P$ it becomes evident that matrix $P$ plays the role of the homeomorphism $h$ between maps discussed in the previous sections, which allows us to establish a \hl{conjugacy relation between the arbitrary matrix $A$ and its diagonalization $D$}.
+\begin{proposition*}
+     Suppose $A$ is invertible and with distinct eigenvalues $\lambda_{1},\lambda_{2}\in \mathbb{R}$ (necessary condition for the diagonalizability of $A$) then $A$ is (linearly) conjugate to $D=\begin{bmatrix}
+             \lambda_{1} & 0 \\
+             0 & \lambda_{2} \\
+     \end{bmatrix}$.
+\end{proposition*}
+\begin{observation}\label{obs1}
+     $\lambda_{1}\neq \lambda_{2}\;\iff\;E_{1}\neq E_{2}$ eigenspaces thus defined
+     \begin{align}
+          Av^{(1)} =& \lambda_{1}v^{(1)}\; \forall v_{(1)}\in E_{1}  \nonumber \\
+           Av^{(2)} =& \lambda_{2}v^{(2)}\; \forall v_{(2)}\in E_{2} \nonumber 
+   \end{align}
+     \begin{figure}[H]
+         \centering 
+         %\includegraphics[keepaspectratio, width=\textwidth]{../figures/.png}
+         \caption{Eigenspaces $E_{1}, E_{2}$ associated to distinct eigenvalues $\lambda_{1}, \lambda_{2}$ and the dynamics in phase space.}
+          \label{fig3}
+     \end{figure}
+  Now suppose $1>\lambda_{1}>\lambda_{2}>0$; crucially $v_{(1)}\in E_{1}$ and $v_{(2)}\in E_{2}$ entails that eigenvector (and more in general eigenspaces) are \textbf{invariant} by the dynamics meaning that if a vector starts onto an eigenspace it will not leave such eigenspace as it evolves through the dynamics.   
+  Now any $v_{0}\in \mathbb{R}^{2}$ can be expressedn in the basis of the eigenvectors leading to
+  \begin{equation*}
+       Av_{0}=A(v_{0}^{(1)}+v_{0}^{(2)})=\lambda_{1}v_{0}^{(1)} + \lambda_{2}v_{0}^{(2)}
+  \end{equation*}
+\end{observation}
+\begin{corollary}
+     Suppose $A,B$ are invertible with the same eigenvaluues $\lambda_{1}\neq \lambda_{2}$, then $A,B$ are linearly conjugate.
+\end{corollary}
+
+\begin{theorem}[label=thm1]{}{}
+     Let $A,B:\mathbb{R}^{2}\,\to\,\mathbb{R}^{2}$ be two hyperbolic, invertible, linear maps with distinct eigenvalues and suppose that $A,B$ have the same kind of fixed points (attraction, repulsion and saddle) and also that they are both either orientation preserving $(\text{det}(A,B)>0)$ or orientation reversing $(\text{det}(A,B)<0)$ then $A,B$ are topologically conjugate.
+\end{theorem}
+\begin{proof}
+     Because of the previous \textbf{Proposition} the fact that both $A,B$ have distinct eigenvalues (i.e. they are diagonalisable) entails that they are linearly conjugate to the diagonal matrix $D=\begin{bmatrix}
+             \lambda_{1} & 0 \\
+             0 & \lambda_{2} \\
+     \end{bmatrix}$.
+Therefore it is sufficient to consider the case of $A,B$ diagonal matrices to prove \textbf{Theorem} \ref{thm1} for any arbitrary matrices.
+\end{proof}
+\begin{proposition*}
+     If $A:\,\mathbb{R}^{2}\,\to \mathbb{R}^{2}$ is an invertible linear map with complex eigenvalues of the form $\alpha + i \beta$ then $A$ is linearly conjugate to $\newprime{D}=\begin{bmatrix}
+             \alpha & \beta \\
+             -\beta & \alpha
+     \end{bmatrix}$
+     As a result $\exists P$ linear map s.t. $A \circ P = P \circ \newprime{D}$.
+\end{proposition*}
+\begin{interpretation*}{}
+     We identify $\mathbb{R}^{2}\approx\mathbb{C}$. This means that the action of $\newprime{D}$ corresponds exactly to the multiplication by $\alpha - i \beta$, i.e. 
+     \begin{equation*}
+          \newprime{D}(v) = \newprime{D}\,v = \begin{bmatrix}
+               \alpha v^{(1)} + \beta v^{(2)} \\
+               -\beta v^{(1)} + \alpha v^{(2)}
+          \end{bmatrix}
+     \end{equation*}
+     becomes
+     \begin{equation*}
+         \newprime{D}(v)=(\alpha - i \beta)(v^{(1)} + i v^{(2)}) = \alpha v^{(1)} - i v^{(1)} + i \alpha v^{2} + \beta v^{(2)} =  \alpha v^{(1)} + \beta v^{(2)} + i(v^{(2)}\alpha - v^{(1)}\beta)
+     \end{equation*}
+where we treated the vector $v$ as a complex number of the form $v^{(1)}+i v^{(2)}$.
+This means that we can build a $1-to-1$ correspondance between the dynamics of a complex linear map and the multiplication between (complex) scala r quantities. In fact $D^{n}(v)=\dots=(\alpha - i \beta)^{n}(v^{(1)}+i v^{(2)})$. 
+
+Even more intuitive is the multiplication in polar form
+\begin{equation*}
+    \newprime{D}^{n}(v)=\rho^{n} e^{i n \theta}\,\rho_{0}\,e^{i \theta_{0}}= \rho^{n}\rho_{0}\,e^{i(n\theta + \theta_{0})}
+\end{equation*}
+From the above it is clear that the $n-$action of the linear (complex) map $\newprime{D}$ onto some vector $v$ is two-fold: specifically, at each iteration $n$ it scales the modulus of $v$ by the amount $\rho$ and rotates its orientation by the amount $\theta_{0}$. 
+If $\rho=|\alpha - i \beta|<1$ then the initial condition will shrink to $0$ (which is thus an attracting point) forward in time in a spiral fashion.
+\begin{figure}[H]
+    \centering 
+    %\includegraphics[keepaspectratio, width=\textwidth]{../figures/.png}
+    \caption{Downward spirals representing the orbit in phase space of an initial condition under the action of a linear complex map with modulus smaller than one but different magnitudes ($\rho \approx 0$ and $\rho \approx 1$).}
+    \label{fig2}
+\end{figure}
+On the other hand if $\rho>1$ then the trajectories will form outward spirals out of any initial condition $v$.
+Finally if $\rho=1$ then the trajectories will be concentric circles (i.e. $A$ is not hyperbolic).
+
+In the more general case in which $A$ is an arbitrary complex matrix (i.e. non-diagonal) with eigenvalues of the form $\alpha + i \beta$ then we known that it will be linearly conjugate to $\newprime{D}=\begin{bmatrix}
+             \alpha & \beta \\
+             -\beta & \alpha
+     \end{bmatrix}$
+and the phase space portrait will look like a skewed spiral
+\begin{figure}[H]
+    \centering 
+    %\includegraphics[keepaspectratio, width=\textwidth]{../figures/.png}
+    \caption{Skewed downward spiral representing the trajectories of an initial condition $v$ under the action of an arbitrary (non-diagonal) linear complex map $A$.}
+    \label{fig3}
+\end{figure}
+It must be emphasised that this trajectory is still converging to the attracting point $0$ but not monotonically so, as opposed to the previous instance.
+\end{interpretation*}
+\begin{theorem}[label=thm2]{}{}
+     Two hyperbolic, invertible, linear maps with distinct eigenvalues are topologically conjugate $\iff$ their fixed points are both of the same type (attracting, repelling or saddle) and they have the same index (number of eigenvalues with positive real part).
+\end{theorem}
+\begin{proof}
+     Suppose $A$ has eigenvalues $\alpha \pm i \beta$ with $\beta\neq0$ and $|\alpha \pm i \beta|<1$ and $\newprime{A}$ has distinct eigenvalues $\lambda_{1}\neq \lambda_{2}$ both less than $1$. Then $A$ is linearly conjugate to $D$ while $\newprime{A}$ is linearly conjugate to $\newprime{D}$. This means that it is sufficient to prove that $D$ is topologically conjugate to $\newprime{D}$. 
+     We recall that two maps are topologically conjugate if their fundamental domains, $\mathcal{U}$ and $\mathcal{V}$ respectively, are therefore we need to construct an homemorphism $\tilde{h}:\,\mathcal{U}\,\to \mathcal{V}$ as we did for the $1-$dimensional case. 
+     This homeomorphism is s.t. $\forall x \in S \;\,\tilde{h}(x)=((\newprime{A})^{-1}\circ\tilde{h}\circ A)(x)$ i.e. it must map \textit{invariant curves} to \textit{invariant curves} as shown below. 
+\begin{figure}[H]
+    \centering 
+    %\includegraphics[keepaspectratio, width=\textwidth]{../figures/.png}
+    \caption{The homoemorphism $h$ maps $D$ to $\newprime{D}$ with their respective fundamental domains $\mathcal{U},\,\mathcal{V}$ showing anular shapes.}
+    \label{fig9}
+\end{figure}
+Then let $h:\,\mathbb{R}^{2}\,\to \mathbb{R}^{2}$ be s.t. $h(0)=0$ and $h(x)=((\newprime{A})^{-\tau(x)}\circ \tilde{h}\circ A^{\tau(x)})(x)$ which is clearly an homeomorphism.
+\end{proof}
+Now we move onto studying the \textbf{structural stability} of high-dimensional linear maps; in order to do that we need a topology (i.e. we need to define a norm) on $L(\mathbb{R}^{2})$ i.e. the space of all linear maps of the form $A = \begin{bmatrix}
+        a & b \\
+        c & d
+\end{bmatrix}$ from $\mathbb{R}^{2}$ to itself.
+Observe that since $L(\mathbb{R}^{2})$ is parametrised by $\mathbb{R}^{4}$ (i.e. there are $4$ independent parameters in the tuple $\{a,b,c,d\}_{}$) then the natural norm would be $||A|| = \sqrt{a^{2}+b^{2}+c^{2}+d^{2}}$.
+Also note that the eigenvalues \hl{continuously depend} on $A$. Now these two trivial yet fundamental observations lead us to a clear intuition on what it means for a linear map to be structurally stable.
+\begin{proposition*}
+     $A\in L(\mathbb{R}^{2})$ is invertible, hyperbolic and with distinct eigenvalues (real or complex) then $A$ is structurally stable w.r.t. topological conjugacy.
+\end{proposition*}
+
+\end{document}

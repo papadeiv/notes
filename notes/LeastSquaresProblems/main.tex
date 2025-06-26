@@ -1,8 +1,19 @@
-\documentclass[../main.tex]{subfiles}
+\PassOptionsToPackage{dvipsnames, table}{xcolor}
+\documentclass[dvipsnames, table, 11pt]{article}
+
+\textwidth=7in
+\textheight=9.5in
+\hoffset=-1in
+\voffset=-1in
+\parskip=10pt
+\parindent=0pt
+
+\usepackage{style}
+
 \begin{document}
-\subsection{Least-squares methods}\label{sec1}
 Check out this source \footnote{\url{https://en.wikipedia.org/wiki/Least_squares}}.
 The general setting is that, given data $\{(x_{j},y_{j})\}_{j=1,\dots,n}$ we want to find a model function $y=f(x,\mu)$ that fits the pairs $(x_{j},y_{j})$ in an optimal way by finding the paramere value $\mu$ that minimises the square of the residual $r = \sum_{j=1}^{n}(y_{j}-f(x_{j},\mu))^2$.
+
 % Linear least-squares (LLSs)
-\subfile{subsec1.1}
+\subfile{sections/sec:lin_least_squares}
 \end{document}

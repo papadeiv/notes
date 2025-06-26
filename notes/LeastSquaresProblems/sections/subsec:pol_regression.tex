@@ -1,6 +1,6 @@
 \documentclass[../main.tex]{subfiles}
 \begin{document}
-\subsubsection{Polynomial regression}\label{subsubsec1.1.1}
+\subsection{Polynomial regression}\label{subsec:pol_regression}
 Check out this source \footnote{\url{https://en.wikipedia.org/wiki/Polynomial_regression}}.
 The model function is chosen as a univariate polynomial of degree $m-1$ so that the goal of this type of regression is to find the optimal set of $m$ coefficients $\{c_{0},\dots,c_{m-1}\}$ that minimises the residual when $f(x,\mu=(c_{0},\dots,c_{m-1})) = \sum_{k=1}^{m}c_{k}x^{k-1}$.
 When we fit such model to the $n$ pairs $\{(x_{j},y_{j})\}_{j=1,\dots,n}$ the problem can be written in matrix form as $\boldsymbol{Ac}-\boldsymbol{b}=\boldsymbol{r}\neq \boldsymbol{0}$ where
@@ -58,7 +58,7 @@ and imposing the equality to $0$ yieling the so-called \textbf{normal equations}
         \boldsymbol{c} = \argmin_{\boldsymbol{x}\in \mathbb{R}^{m}}r(\boldsymbol{x}) = \big(\boldsymbol{A}^{T}\boldsymbol{A}\big)^{-1}\boldsymbol{A}^{T}\boldsymbol{b} = \boldsymbol{A}^{+}\boldsymbol{b} \,,
 \end{equation}
 where $\big(\boldsymbol{A}^{T}\boldsymbol{A}\big)^{-1}\boldsymbol{A}^{T} =: \boldsymbol{A}^{+}\in \mathbb{R}^{m\times n}$ is the pseudoinverse of a non-square matrix $\boldsymbol{A}\in \mathbb{R}^{n\times m}$ of rank $m$.
-% Statistical error analysis
-\subfile{par1.1.1.1}
 
+% Statistical error analysis 
+\subfile{subsubsec:stat_err_analysis}
 \end{document}
